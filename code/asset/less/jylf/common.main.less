@@ -1,5 +1,6 @@
 @charset "utf-8";
 
+
 /* CSS Document */
 
 * {
@@ -33,7 +34,6 @@ h4 {
     outline: none;
     font-family: PingFangSC, "微软雅黑";
     font-weight: 400;
-    font-size: 1.4rem;
 }
 
 img {
@@ -154,6 +154,7 @@ h2,
 h3 {}
 
 
+
 /* LESS */
 
 //变量 定义rem大小，并设置单位
@@ -162,18 +163,18 @@ h3 {}
 
 
 
+
 /* =S tool style 
 ==================================*/
 
 .highlight {}
 
-.clickable {
+.ui-linktext {
     text-decoration: underline!important;
-    ;
     color: @mainColor;
 }
 
-.link-btn {
+.ui-linkbtn {
     display: block;
     border-radius: 44px;
     background-color: @mainColor;
@@ -183,6 +184,34 @@ h3 {}
     text-align: center;
     box-shadow: 0px 7px 24px #FFEBE3D7;
 }
+
+.ui-dl {
+	font-size: 30/@rem;
+    .dt {}
+    .dd {
+    	input{line-height: 30/@rem;width: 100%;}
+    }
+}
+
+@font-face {
+    font-family: 'iconfont';
+    /* project id 797836 */
+    src: url('//at.alicdn.com/t/font_797836_qwhcrfek5wa.eot');
+    src: url('//at.alicdn.com/t/font_797836_qwhcrfek5wa.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_797836_qwhcrfek5wa.woff') format('woff'),
+    url('//at.alicdn.com/t/font_797836_qwhcrfek5wa.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_797836_qwhcrfek5wa.svg#iconfont') format('svg');
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
 
 
 /* =S UI Component style 
@@ -196,17 +225,20 @@ h3 {}
 }
 
 .head-area {
-    .left-arrow {
+    .left {
         display: block;
-        width: 68px;
-        height: 68px;
-        background: url(../../img/jylf/back.png) no-repeat center;
+        width: 68/@rem;
+        height: 68/@rem;
+        font-size: 38/@rem;
+        text-align: center;
+        line-height: 68/@rem; // background: url(../../img/back.png) no-repeat center;
     }
 }
 
 .content-area {}
 
 .foot-area {}
+
 
 
 /* =S content style 
@@ -233,15 +265,15 @@ h3 {}
                 color: #999;
                 text-align: center;
                 font-size: 30/@rem;
-                margin-bottom: 60px;
+                margin-bottom: 60/@rem;
             }
             p {
                 text-align: center;
                 a {
                     display: inline-block;
-                    width: 86px;
-                    height: 86px;
-                    background: url(../../img/jylf/wechat.png) no-repeat;
+                    width: 86/@rem;
+                    height: 86/@rem;
+                    background: url(../../img/wechat.png) no-repeat;
                     background-size: auto 100%;
                 }
             }
@@ -254,5 +286,24 @@ h3 {}
         width: 100%;
         text-align: center;
         font-size: 28/@rem;
+    }
+
+    .tab {
+    	padding-top: 50/@rem;
+        display: flex;
+
+        a {
+            flex: 1;
+            text-align: center;
+			color: #999;
+			font-size: 48/@rem;
+            &.cur{color: @mainColor;}
+        }
+    }
+
+    .input-area{
+    	padding-top: 130/@rem;
+		font-size: 30/@rem;
+    	.iconfont{font-size: 32/@rem;}
     }
 }

@@ -28,7 +28,6 @@ h4 {
   outline: none;
   font-family: PingFangSC, "微软雅黑";
   font-weight: 400;
-  font-size: 1.4rem;
 }
 img {
   border: 0;
@@ -129,11 +128,11 @@ i {
 /* LESS */
 /* =S tool style 
 ==================================*/
-.clickable {
+.ui-linktext {
   text-decoration: underline!important;
   color: #D3A460;
 }
-.link-btn {
+.ui-linkbtn {
   display: block;
   border-radius: 44px;
   background-color: #D3A460;
@@ -143,6 +142,27 @@ i {
   text-align: center;
   box-shadow: 0px 7px 24px #FFEBE3D7;
 }
+.ui-dl {
+  font-size: 0.66666667rem;
+}
+.ui-dl .dd input {
+  line-height: 0.66666667rem;
+  width: 100%;
+}
+@font-face {
+  font-family: 'iconfont';
+  /* project id 797836 */
+  src: url('//at.alicdn.com/t/font_797836_qwhcrfek5wa.eot');
+  src: url('//at.alicdn.com/t/font_797836_qwhcrfek5wa.eot?#iefix') format('embedded-opentype'), url('//at.alicdn.com/t/font_797836_qwhcrfek5wa.woff') format('woff'), url('//at.alicdn.com/t/font_797836_qwhcrfek5wa.ttf') format('truetype'), url('//at.alicdn.com/t/font_797836_qwhcrfek5wa.svg#iconfont') format('svg');
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
 /* =S UI Component style 
 ==================================*/
 .container {
@@ -151,11 +171,13 @@ i {
   bottom: 0;
   width: 100%;
 }
-.head-area .left-arrow {
+.head-area .left {
   display: block;
-  width: 68px;
-  height: 68px;
-  background: url(../../img/jylf/back.png) no-repeat center;
+  width: 1.51111111rem;
+  height: 1.51111111rem;
+  font-size: 0.84444444rem;
+  text-align: center;
+  line-height: 1.51111111rem;
 }
 /* =S content style 
 ==================================*/
@@ -178,16 +200,16 @@ i {
   color: #999;
   text-align: center;
   font-size: 0.66666667rem;
-  margin-bottom: 60px;
+  margin-bottom: 1.33333333rem;
 }
 #login .content-area .other-login p {
   text-align: center;
 }
 #login .content-area .other-login p a {
   display: inline-block;
-  width: 86px;
-  height: 86px;
-  background: url(../../img/jylf/wechat.png) no-repeat;
+  width: 1.91111111rem;
+  height: 1.91111111rem;
+  background: url(../../img/wechat.png) no-repeat;
   background-size: auto 100%;
 }
 #login .foot-area {
@@ -196,4 +218,24 @@ i {
   width: 100%;
   text-align: center;
   font-size: 0.62222222rem;
+}
+#login .tab {
+  padding-top: 1.11111111rem;
+  display: flex;
+}
+#login .tab a {
+  flex: 1;
+  text-align: center;
+  color: #999;
+  font-size: 1.06666667rem;
+}
+#login .tab a.cur {
+  color: #D3A460;
+}
+#login .input-area {
+  padding-top: 2.88888889rem;
+  font-size: 0.66666667rem;
+}
+#login .input-area .iconfont {
+  font-size: 0.71111111rem;
 }

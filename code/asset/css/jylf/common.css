@@ -128,6 +128,9 @@ i {
 /* LESS */
 /* =S tool style 
 ==================================*/
+.highlight {
+  color: #D3A460;
+}
 .ui-linktext {
   text-decoration: underline!important;
   color: #D3A460;
@@ -136,24 +139,38 @@ i {
   display: block;
   border-radius: 44px;
   background-color: #D3A460;
+  background: -webkit-linear-gradient(left, #E0B372, #D3A460);
+  /* 标准的语法 */
   font-size: 0.66666667rem;
   color: #fff;
   line-height: 88px;
   text-align: center;
-  box-shadow: 0px 7px 24px #FFEBE3D7;
 }
-.ui-dl {
+.ui-linkbtn-2 {
+  display: inline-block;
+  padding: 0.42222222rem 0.71111111rem;
+  border-radius: 0.71111111rem;
+  color: #D3A460;
+  border: 0.02222222rem solid #D3A460;
+}
+.ui-dl .dt {
   font-size: 0.66666667rem;
 }
 .ui-dl .dd input {
   line-height: 0.66666667rem;
+  font-size: 0.66666667rem;
   width: 100%;
+  border: 0;
+  color: #999;
+}
+.ui-dl .dd input:focus {
+  color: #4A4A4A;
 }
 @font-face {
   font-family: 'iconfont';
   /* project id 797836 */
-  src: url('//at.alicdn.com/t/font_797836_qwhcrfek5wa.eot');
-  src: url('//at.alicdn.com/t/font_797836_qwhcrfek5wa.eot?#iefix') format('embedded-opentype'), url('//at.alicdn.com/t/font_797836_qwhcrfek5wa.woff') format('woff'), url('//at.alicdn.com/t/font_797836_qwhcrfek5wa.ttf') format('truetype'), url('//at.alicdn.com/t/font_797836_qwhcrfek5wa.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_797836_luesa8qwjzp.eot');
+  src: url('//at.alicdn.com/t/font_797836_luesa8qwjzp.eot?#iefix') format('embedded-opentype'), url('//at.alicdn.com/t/font_797836_luesa8qwjzp.woff') format('woff'), url('//at.alicdn.com/t/font_797836_luesa8qwjzp.ttf') format('truetype'), url('//at.alicdn.com/t/font_797836_luesa8qwjzp.svg#iconfont') format('svg');
 }
 .iconfont {
   font-family: "iconfont" !important;
@@ -170,6 +187,7 @@ i {
   top: 50px;
   bottom: 0;
   width: 100%;
+  font-size: 0.66666667rem;
 }
 .head-area .left {
   display: block;
@@ -181,6 +199,9 @@ i {
 }
 /* =S content style 
 ==================================*/
+#login .title-area {
+  padding-top: 1.46666667rem;
+}
 #login .content-area {
   padding: 0 11%;
 }
@@ -194,7 +215,7 @@ i {
   padding-bottom: 70px;
 }
 #login .content-area .other-login {
-  padding-top: 130px;
+  padding-top: 4.66666667rem;
 }
 #login .content-area .other-login h3 {
   color: #999;
@@ -233,9 +254,34 @@ i {
   color: #D3A460;
 }
 #login .input-area {
-  padding-top: 2.88888889rem;
+  margin-top: 2.88888889rem;
+  padding-bottom: 1.75555556rem;
   font-size: 0.66666667rem;
 }
 #login .input-area .iconfont {
   font-size: 0.71111111rem;
+}
+#login .input-area .ui-dl {
+  margin-top: 2.24444444rem;
+}
+#login .input-area .ui-dl .dd {
+  margin-top: 1.33333333rem;
+}
+#login .input-area .password .dd {
+  position: relative;
+}
+#login .input-area .password input {
+  padding-right: 0.71111111rem;
+}
+#login .input-area .password .icon {
+  position: absolute;
+  right: 0;
+}
+#login .input-area .auth-code input {
+  margin-right: 2.26666667rem;
+  width: 5.28888889rem;
+}
+#login .input-area .ui-linktext {
+  margin-top: 1.11111111rem;
+  display: block;
 }

@@ -2,6 +2,7 @@
 
 
 
+
 /* CSS Document */
 
 * {
@@ -22,7 +23,7 @@ body {
     width: 100%;
     height: 100%;
     font-weight: 400;
-    color:#333;
+    color: #333;
 }
 
 form,
@@ -161,22 +162,30 @@ h3 {}
 
 
 
+
 /* LESS */
 
 //变量 定义rem大小，并设置单位
 @rem: 45rem;
 @mainColor: #D3A460;
 
-body {
-    background: url(../../img/bg.png) no-repeat;
-    background-size: cover;
+
+body,
+html {
+    height: 100%;
 }
+body{background: #F1F3F4;}
 
 
 
 /* =S tool style 
 ==================================*/
-.ta-c{text-align: center;}
+.bg-white{background: #fff;}
+.mg-s{border-bottom: 10/@rem solid #F1F3F4;}
+.ta-c {
+    text-align: center;
+}
+
 .highlight {
     color: @mainColor;
 }
@@ -185,6 +194,9 @@ body {
     text-decoration: underline!important;
     color: @mainColor;
 }
+.ui-tag{padding:13/@rem 16/@rem;font-size:24/@rem;color: #fff;background: #EAEAEA;border-radius:23/@rem;}
+.ui-tag2{font-size:24/@rem;
+     display: inline-block;padding:0 15/@rem;border-radius: 20/@rem;background:rgba(211,164,96,0.2);color: @mainColor;}
 
 .ui-linkbtn {
     display: block;
@@ -198,6 +210,7 @@ body {
     text-align: center;
 }
 
+
 .ui-linkbtn-2 {
     display: inline-block;
     padding: 19/@rem 32/@rem;
@@ -207,7 +220,7 @@ body {
 }
 
 .ui-dl {
-	position: relative;
+    position: relative;
 
     .dt {
         font-size: 30/@rem;
@@ -223,12 +236,14 @@ body {
                 color: #4A4A4A;
             }
         }
-        .icon{position: absolute;right: 0;}
-
+        .icon {
+            position: absolute;
+            right: 0;
+        }
     }
 }
 
-@fontpath:'../../font';
+@fontpath: '../../font';
 @font-face {
     font-family: 'iconfont';
     /* project id 797836 */
@@ -251,16 +266,22 @@ body {
 
 
 
+
 /* =S UI Component style 
 ==================================*/
 
 .container {
     position: absolute;
-    top: 50px;
+    top: 0;
     bottom: 0;
+    // padding-top: 50/@rem;
     width: 100%;
-    font-size: 30/@rem; // background: url(../../img/bg.png) no-repeat;
-    // background-size: cover;
+    font-size: 30/@rem;
+    
+}
+.bgPic{
+    background: url(../../img/bg.png) no-repeat;
+    background-size: cover;
 }
 
 .head-area {
@@ -275,9 +296,9 @@ body {
         text-align: center;
         line-height: 68/@rem; // background: url(../../img/back.png) no-repeat center;
     }
-    .right{
-    	position: absolute;
-    	right: 24/@rem;
+    .right {
+        position: absolute;
+        right: 24/@rem;
     }
 }
 
@@ -292,17 +313,20 @@ body {
 }
 
 
+
 /* =S content style 
 ==================================*/
 
 // 登陆
 #login {
+    background: url(../../img/bg.png) no-repeat;
+    background-size: cover;
     .title-area {
         padding-top: 66/@rem;
 
         .upload-box {
-        	margin-bottom: 49/@rem;
-        	text-align: center;
+            margin-bottom: 49/@rem;
+            text-align: center;
             .iconfont {
                 font-size: 222/@rem;
             }
@@ -316,12 +340,15 @@ body {
                 width: 260/@rem;
                 padding: 21/@rem 0;
                 font-size: 30/@rem;
-                border-radius:40/@rem;
+                border-radius: 40/@rem;
                 background: #ccc;
-               .iconfont{color: @mainColor;font-size: 38/@rem;}
+                .iconfont {
+                    color: @mainColor;
+                    font-size: 38/@rem;
+                }
 
-                &.cur{
-                	background: #FFF2DF;
+                &.cur {
+                    background: #FFF2DF;
                 }
             }
         }
@@ -358,20 +385,37 @@ body {
                 }
             }
         }
-    }
-	//完成注册
-    .complete-registration{
-    	.cr-text{
-    		color: #4A4A4A;
-			.iconfont{font-size: 98/@rem;color: #60D370;}
-			h3{font-size: 48/@rem;}
-			h4{font-size:36/@rem;}
-			p{color: #666;}
-			.mb{margin-bottom: 147/@rem;}
-			.mb2{margin-bottom: 201/@rem;margin-top: 29/@rem;}
-    	}
-    	.tip{margin-bottom: 20/@rem;}
-    	.ui-linkbtn{margin-bottom: 28/@rem;}
+    } //完成注册
+    .complete-registration {
+        .cr-text {
+            color: #4A4A4A;
+            .iconfont {
+                font-size: 98/@rem;
+                color: #60D370;
+            }
+            h3 {
+                font-size: 48/@rem;
+            }
+            h4 {
+                font-size: 36/@rem;
+            }
+            p {
+                color: #666;
+            }
+            .mb {
+                margin-bottom: 147/@rem;
+            }
+            .mb2 {
+                margin-bottom: 201/@rem;
+                margin-top: 29/@rem;
+            }
+        }
+        .tip {
+            margin-bottom: 20/@rem;
+        }
+        .ui-linkbtn {
+            margin-bottom: 28/@rem;
+        }
     }
 
     .foot-area {
@@ -436,12 +480,106 @@ body {
         .ui-linktext {
             margin-top: 50/@rem;
             display: block;
+        } //完善信息
+        &.complete-info {
+            input {
+                font-size: 24/@rem;
+                color: #999;
+                &:focus {
+                    color: #333;
+                }
+            }
         }
-		//完善信息
-        &.complete-info{
-        	input{font-size: 24/@rem;color: #999;
-				&:focus{color: #333;}
-        	}
+    }
+}
+
+//  =S 消息
+.ui-tab {
+    overflow: hidden;
+    box-shadow: 0 10/@rem 10/@rem #FAF9F8;
+    background: #fff;
+    padding-top: 43/@rem;
+    padding-bottom: 43/@rem;
+    margin-bottom: 10/@rem;
+
+    li {
+        float: left;
+        width: 50%;
+        font-size: 36/@rem;
+        text-align: center;
+        &.cur {
+            color: @mainColor;
+            
+           span {
+            position: relative;
+            margin-top: 31/@rem;
+            padding-bottom: 31/@rem;
+            word-break: keep-all;
+
+            sub {
+                position: absolute;
+                
+                border-radius: 8/@rem;
+                background: #E30920;
+                width: 16/@rem;
+                height: 16/@rem;
+            }
+            em{position: absolute;bottom:0;left:30/@rem;width: 80/@rem;height: 4/@rem;background: @mainColor;}
         }
+        }
+        
+        
+    }
+}
+.msg-list{background: #fff;}
+.msg-item{
+    position: relative;
+    margin:0 24/@rem;
+    padding:27/@rem 0 15/@rem 0;
+    border-bottom:2px solid #EDEDED;
+    overflow: hidden;
+    img{border-radius: 100%;width: 80/@rem;height: 80/@rem;float: left;margin-right: 20/@rem;}
+    .detail{
+        float: left;
+        color: #999;
+        h4{color: #4A4A4A;margin-bottom: 19/@rem;}
+        .mark{font-size:24/@rem;
+     display: inline-block;padding:8/@rem 15/@rem;border-radius: 20/@rem;background:rgba(211,164,96,0.2);color: @mainColor;}    }
+        .tip{position: absolute;top:35/@rem;right: 0;font-size:24/@rem;}
+}
+.ui-operation-foot{
+    display: flex;
+    position: absolute;
+    bottom: 0;
+        width: 100%;
+    background: #fff;
+    padding: 8/@rem 0;
+    li{flex: 1;text-align: center;}
+    .publish{
+        i{
+        font-size: 34/@rem;    
+        }
+        background: #fff;
+        color: @mainColor;
+        div{border-radius: 100%; background:#fff;display:inline-block;width: 80/@rem;height: 80/@rem;position: relative;top:-23/@rem;line-height: 80/@rem;}
+    }
+}
+
+//系统消息
+.system{
+    .ta-c{padding:30/@rem 0;}
+    // .ui-bgbtn{maring:30/@rem 0;}
+}
+
+// 生日祝福
+#birthday-blessing{
+    .ui-linkbtn{margin:0 60/@rem;margin-bottom: 39/@rem;}
+}
+.birthday-card{
+    h4{padding:8/@rem 0 30/@rem 0;color:#F14D4E; font-size: 36/@rem;}
+    .pic-box{
+        padding: 0 24/@rem;
+        margin-bottom: 60/@rem;
+        img{width: 100%;height: 100%;background-size: cover;}
     }
 }

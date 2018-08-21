@@ -162,7 +162,8 @@ body {
   background: #EAEAEA;
   border-radius: 0.51111111rem;
 }
-.ui-tag2 {
+.ui-tag2,
+.ui-tag-2 {
   font-size: 0.53333333rem;
   display: inline-block;
   padding: 0 0.33333333rem;
@@ -180,6 +181,13 @@ body {
   color: #fff;
   line-height: 1.95555556rem;
   text-align: center;
+}
+.ui-linkbtn-3 {
+  display: inline-block;
+  border-radius: 0.22222222rem;
+  padding: 0.24444444rem 0.31111111rem;
+  background: -webkit-linear-gradient(left, #E0B372, #D3A460);
+  color: #fff;
 }
 .ui-linkbtn-2 {
   display: inline-block;
@@ -211,8 +219,8 @@ body {
 @font-face {
   font-family: 'iconfont';
   /* project id 797836 */
-  src: url('../../font/iconfont.eot');
-  src: url('../../font/iconfont.eot?#iefix') format('embedded-opentype'), url('../../font/iconfont.woff') format('woff'), url('../../font/iconfont.ttf') format('truetype'), url('../../font/iconfont.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_797836_luesa8qwjzp.eot');
+  src: url('//at.alicdn.com/t/font_797836_luesa8qwjzp.eot?#iefix') format('embedded-opentype'), url('//at.alicdn.com/t/font_797836_luesa8qwjzp.woff') format('woff'), url('//at.alicdn.com/t/font_797836_luesa8qwjzp.ttf') format('truetype'), url('//at.alicdn.com/t/font_797836_luesa8qwjzp.svg#iconfont') format('svg');
 }
 .iconfont {
   font-family: "iconfont" !important;
@@ -235,10 +243,82 @@ body {
   background: url(../../img/bg.png) no-repeat;
   background-size: cover;
 }
+.ui-input {
+  position: relative;
+  margin: 0 0.53333333rem;
+  padding-right: 1.33333333rem;
+  border-bottom: 0.04444444rem solid #EDEDED;
+  line-height: 2.88888889rem;
+  color: #4A4A4A;
+}
+.ui-input .txt {
+  width: 100%;
+  line-height: 2.88888889rem;
+}
+.ui-input .iconfont {
+  position: absolute;
+  right: 0;
+}
+.ui-tip {
+  padding: 0.62222222rem 0.51111111rem;
+  color: #999;
+  background: #f1f3f4;
+}
+.search-wrap {
+  padding: 0.22222222rem 0.53333333rem;
+}
+.search-wrap.focus .ui-search {
+  text-align: left;
+  width: 13.11111111rem;
+}
+.search-wrap.focus .ui-search .txt {
+  padding-left: 1.4rem;
+  font-size: 0.66666667rem;
+}
+.search-wrap.focus .ui-search .placeholder {
+  padding-left: 0.73333333rem;
+}
+.search-wrap.focus .ui-search .placeholder em {
+  display: none;
+}
+.search-wrap.focus .search-cancel {
+  display: inline-block;
+}
+.ui-search {
+  height: 1.33333333rem;
+  width: 100%;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+}
+.ui-search .txt {
+  position: absolute;
+  left: 0;
+  z-index: 0;
+  line-height: 1.33333333rem;
+  width: 100%;
+  border-radius: 0.66666667rem;
+  background: #fff;
+  padding: 0 0.55555556rem;
+}
+.ui-search .placeholder {
+  position: relative;
+  z-index: 1;
+  line-height: 1.33333333rem;
+  color: #999;
+}
+.ui-search .placeholder i {
+  font-size: 0.71111111rem;
+}
+.ui-search .placeholder em {
+  font-size: 0.62222222rem;
+}
 .head-area {
   text-align: center;
   height: 1.51111111rem;
+  line-height: 1.51111111rem;
   font-size: 0.8rem;
+  margin-bottom: 0.04444444rem;
 }
 .head-area .left {
   position: absolute;
@@ -251,9 +331,59 @@ body {
 .head-area .right {
   position: absolute;
   right: 0.53333333rem;
+  top: 0;
 }
 .ui-article p {
   text-indent: 1.33333333rem;
+}
+.ui-list .list-item {
+  position: relative;
+  border: 0.04444444rem solid #F1F3F4;
+  padding: 0.57777778rem 0.53333333rem;
+  overflow: hidden;
+}
+.ui-list .list-item .title {
+  margin-bottom: 0.42222222rem;
+  font-size: 0.66666667rem;
+}
+.ui-list .list-item .cont {
+  color: #999;
+  font-size: 0.53333333rem;
+}
+.ui-list .list-item .ui-linkbtn {
+  border-radius: 0.22222222rem;
+  display: inline-block;
+  padding: 0.24444444rem 0.31111111rem;
+  line-height: 0.53333333rem;
+  position: absolute;
+  top: 0.95555556rem;
+  right: 0.53333333rem;
+  font-size: 0.57777778rem;
+}
+.ui-list .list-item .ui-linkbtn.disabled {
+  background: #DEDEDE;
+}
+.ui-list .list-item .left,
+.ui-list .list-item .right {
+  float: left;
+}
+.ui-list .list-item .left {
+  width: 1.77777778rem;
+  height: 1.77777778rem;
+  line-height: 1.77777778rem;
+  text-align: center;
+  margin-right: 0.42222222rem;
+}
+.ui-list .list-item .left .firstname {
+  border-radius: 100%;
+  width: 100%;
+  display: block;
+  background: #F3B966;
+  color: #fff;
+  float: left;
+}
+.ui-list .list-item .right .highlight {
+  font-size: 0.62222222rem;
 }
 /* =S content style 
 ==================================*/

@@ -1,0 +1,379 @@
+@charset "utf-8";
+/* CSS Document */
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+body {
+  font-family: PingFangSC, "微软雅黑";
+  -webkit-user-select: none;
+  -webkit-text-size-adjust: none;
+  width: 100%;
+  height: 100%;
+  font-weight: 400;
+  color: #333;
+}
+form,
+input,
+button,
+option,
+textarea,
+select,
+h3,
+h4 {
+  outline: none;
+  font-family: PingFangSC, "微软雅黑";
+  font-weight: 400;
+  background: none;
+  border: none;
+}
+img {
+  border: 0;
+}
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary {
+  display: block;
+  border: 0;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+ins {
+  background: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+mark {
+  background: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+del {
+  text-decoration: line-through;
+}
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted #000;
+  cursor: help;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+a {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+  outline: none;
+}
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+}
+textarea {
+  resize: none;
+}
+input,
+select,
+textarea {
+  -webkit-appearance: none;
+  vertical-align: middle;
+  background: none;
+}
+li {
+  list-style-type: none;
+}
+em,
+i {
+  font-style: normal;
+}
+/* LESS */
+body {
+  background: url(../../img/bg.png) no-repeat;
+  background-size: cover;
+}
+/* =S tool style 
+==================================*/
+.ta-c {
+  text-align: center;
+}
+.highlight {
+  color: #D3A460;
+}
+.ui-linktext {
+  text-decoration: underline!important;
+  color: #D3A460;
+}
+.ui-linkbtn {
+  display: block;
+  border-radius: 0.97777778rem;
+  background-color: #D3A460;
+  background: -webkit-linear-gradient(left, #E0B372, #D3A460);
+  /* 标准的语法 */
+  font-size: 0.66666667rem;
+  color: #fff;
+  line-height: 1.95555556rem;
+  text-align: center;
+}
+.ui-linkbtn-2 {
+  display: inline-block;
+  padding: 0.42222222rem 0.71111111rem;
+  border-radius: 0.71111111rem;
+  color: #D3A460;
+  border: 0.02222222rem solid #D3A460;
+}
+.ui-dl {
+  position: relative;
+}
+.ui-dl .dt {
+  font-size: 0.66666667rem;
+}
+.ui-dl .dd input {
+  line-height: 0.66666667rem;
+  font-size: 0.66666667rem;
+  width: 90%;
+  border: 0;
+  color: #999;
+}
+.ui-dl .dd input:focus {
+  color: #4A4A4A;
+}
+.ui-dl .dd .icon {
+  position: absolute;
+  right: 0;
+}
+@font-face {
+  font-family: 'iconfont';
+  /* project id 797836 */
+  src: url('../../font/iconfont.eot');
+  src: url('../../font/iconfont.eot?#iefix') format('embedded-opentype'), url('../../font/iconfont.woff') format('woff'), url('../../font/iconfont.ttf') format('truetype'), url('../../font/iconfont.svg#iconfont') format('svg');
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* =S UI Component style 
+==================================*/
+.container {
+  position: absolute;
+  top: 50px;
+  bottom: 0;
+  width: 100%;
+  font-size: 0.66666667rem;
+}
+.head-area {
+  text-align: center;
+  height: 1.51111111rem;
+  font-size: 0.8rem;
+}
+.head-area .left {
+  position: absolute;
+  left: 0;
+  width: 1.51111111rem;
+  font-size: 0.84444444rem;
+  text-align: center;
+  line-height: 1.51111111rem;
+}
+.head-area .right {
+  position: absolute;
+  right: 0.53333333rem;
+}
+.ui-article p {
+  text-indent: 1.33333333rem;
+}
+/* =S content style 
+==================================*/
+#login .title-area {
+  padding-top: 1.46666667rem;
+}
+#login .title-area .upload-box {
+  border-radius: 5px;
+  margin-bottom: 1.08888889rem;
+  text-align: center;
+}
+#login .title-area .upload-box .iconfont {
+  font-size: 4.93333333rem;
+}
+#login .title-area .upload-box p {
+  color: #333333;
+  text-align: center;
+}
+#login .title-area .man-or-woman button {
+  width: 5.77777778rem;
+  padding: 0.46666667rem 0;
+  font-size: 0.66666667rem;
+  border-radius: 0.88888889rem;
+  background: #ccc;
+}
+#login .title-area .man-or-woman button .iconfont {
+  color: #D3A460;
+  font-size: 0.84444444rem;
+}
+#login .title-area .man-or-woman button.cur {
+  background: #FFF2DF;
+}
+#login .content-area {
+  padding: 0 11%;
+}
+#login .content-area h2 {
+  text-align: center;
+  font-size: 1.42222222rem;
+  font-family: PingFang-SC-Bold;
+  color: #D3A460;
+  font-weight: 500;
+  margin-top: 211px;
+  padding-bottom: 70px;
+}
+#login .content-area .other-login {
+  padding-top: 4.66666667rem;
+}
+#login .content-area .other-login h3 {
+  color: #999;
+  text-align: center;
+  font-size: 0.66666667rem;
+  margin-bottom: 1.33333333rem;
+}
+#login .content-area .other-login p {
+  text-align: center;
+}
+#login .content-area .other-login p a {
+  display: inline-block;
+  width: 1.91111111rem;
+  height: 1.91111111rem;
+  background: url(../../img/wechat.png) no-repeat;
+  background-size: auto 100%;
+}
+#login .complete-registration .cr-text {
+  color: #4A4A4A;
+}
+#login .complete-registration .cr-text .iconfont {
+  font-size: 2.17777778rem;
+  color: #60D370;
+}
+#login .complete-registration .cr-text h3 {
+  font-size: 1.06666667rem;
+}
+#login .complete-registration .cr-text h4 {
+  font-size: 0.8rem;
+}
+#login .complete-registration .cr-text p {
+  color: #666;
+}
+#login .complete-registration .cr-text .mb {
+  margin-bottom: 3.26666667rem;
+}
+#login .complete-registration .cr-text .mb2 {
+  margin-bottom: 4.46666667rem;
+  margin-top: 0.64444444rem;
+}
+#login .complete-registration .tip {
+  margin-bottom: 0.44444444rem;
+}
+#login .complete-registration .ui-linkbtn {
+  margin-bottom: 0.62222222rem;
+}
+#login .foot-area {
+  position: absolute;
+  bottom: 55px;
+  width: 100%;
+  text-align: center;
+  font-size: 0.62222222rem;
+}
+#login .tab {
+  padding-top: 1.11111111rem;
+  display: flex;
+}
+#login .tab a {
+  flex: 1;
+  text-align: center;
+  color: #999;
+  font-size: 1.06666667rem;
+}
+#login .tab a.cur {
+  color: #D3A460;
+}
+#login .input-area {
+  margin-top: 2.88888889rem;
+  padding-bottom: 1.75555556rem;
+  font-size: 0.66666667rem;
+}
+#login .input-area .iconfont {
+  font-size: 0.71111111rem;
+}
+#login .input-area .ui-dl {
+  margin-top: 2.24444444rem;
+}
+#login .input-area .ui-dl .dd {
+  margin-top: 1.33333333rem;
+}
+#login .input-area .password .dd {
+  position: relative;
+}
+#login .input-area .password input {
+  padding-right: 0.71111111rem;
+}
+#login .input-area .password .icon {
+  position: absolute;
+  right: 0;
+}
+#login .input-area .auth-code input {
+  margin-right: 2.26666667rem;
+  width: 5.28888889rem;
+}
+#login .input-area .ui-linktext {
+  margin-top: 1.11111111rem;
+  display: block;
+}
+#login .input-area.complete-info input {
+  font-size: 0.53333333rem;
+  color: #999;
+}
+#login .input-area.complete-info input:focus {
+  color: #333;
+}

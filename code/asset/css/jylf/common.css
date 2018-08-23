@@ -1033,7 +1033,6 @@ body {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-<<<<<<< HEAD
 .cont-page-banner {
   height: 8.97777778rem;
   overflow: hidden;
@@ -1046,7 +1045,7 @@ body {
 }
 .cont-wrap-p {
   padding: 0 0.53333333rem;
-=======
+}
 .blank {
   height: 6.53333333rem;
 }
@@ -1097,5 +1096,4 @@ body {
   color: #999;
   line-height: 0.55555556rem;
   padding-bottom: 1.06666667rem;
->>>>>>> 31f77ed93abe3a051b394a831d65849f7dc62228
 }

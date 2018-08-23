@@ -186,11 +186,12 @@ body {
 
 /* =S tool style 
 ==================================*/
-
+.underline{border-bottom: 2/@rem solid #EDEDED;}
 .bg-white {
-    background: #fff;
+    background: #fff!important;
 }
-
+.m-lr{margin:0 23/@rem;}
+.p-lr{padding:0 23/@rem;}
 .bgPic {
     background: url(../../img/bg.png) no-repeat;
     background-size: cover;
@@ -212,6 +213,9 @@ body {
 .ta-c {
     text-align: center;
 }
+.p-r{position: relative;}
+.hide{display: none;}
+.show{display: block;}
 
 .highlight {
     color: @mainColor;
@@ -252,7 +256,8 @@ body {
     text-align: center;
 
     &.flud{width: 77.777%;margin: 0 auto;}
-            &.bottom{margin-top: 96/@rem;}
+    &.bottom{margin-top: 96/@rem;}
+    &.size-s{display: inline-block;line-height: 23/@rem;padding:12/@rem 22/@rem;font-size: 24/@rem;border-radius: 24/@rem!important;}
 }
 
 .ui-linkbtn-3 {
@@ -296,25 +301,25 @@ body {
     }
 }
 
-// @fontpath: '../../font';
-// @font-face {
-//     font-family: 'iconfont';
-//     /* project id 797836 */
-//     src: url('@{fontpath}/iconfont.eot');
-//     src: url('@{fontpath}/iconfont.eot?#iefix') format('embedded-opentype'),
-//     url('@{fontpath}/iconfont.woff') format('woff'),
-//     url('@{fontpath}/iconfont.ttf') format('truetype'),
-//     url('@{fontpath}/iconfont.svg#iconfont') format('svg');
-// }
+@fontpath: '../../font';
 @font-face {
     font-family: 'iconfont';
     /* project id 797836 */
-    src: url('//at.alicdn.com/t/font_797836_luesa8qwjzp.eot');
-    src: url('//at.alicdn.com/t/font_797836_luesa8qwjzp.eot?#iefix') format('embedded-opentype'),
-    url('//at.alicdn.com/t/font_797836_luesa8qwjzp.woff') format('woff'),
-    url('//at.alicdn.com/t/font_797836_luesa8qwjzp.ttf') format('truetype'),
-    url('//at.alicdn.com/t/font_797836_luesa8qwjzp.svg#iconfont') format('svg');
+    src: url('@{fontpath}/iconfont.eot');
+    src: url('@{fontpath}/iconfont.eot?#iefix') format('embedded-opentype'),
+    url('@{fontpath}/iconfont.woff') format('woff'),
+    url('@{fontpath}/iconfont.ttf') format('truetype'),
+    url('@{fontpath}/iconfont.svg#iconfont') format('svg');
 }
+// @font-face {
+//     font-family: 'iconfont';
+//     /* project id 797836 */
+//     src: url('//at.alicdn.com/t/font_797836_luesa8qwjzp.eot');
+//     src: url('//at.alicdn.com/t/font_797836_luesa8qwjzp.eot?#iefix') format('embedded-opentype'),
+//     url('//at.alicdn.com/t/font_797836_luesa8qwjzp.woff') format('woff'),
+//     url('//at.alicdn.com/t/font_797836_luesa8qwjzp.ttf') format('truetype'),
+//     url('//at.alicdn.com/t/font_797836_luesa8qwjzp.svg#iconfont') format('svg');
+// }
 
 .iconfont {
     font-family: "iconfont" !important;
@@ -342,15 +347,35 @@ body {
     font-size: 30/@rem;
 }
 
+.ui-input{color: #999;
+   &:focus{
+        color: #4A4A4A;
+    } 
+}
+.ui-textarea{
+    color: #999;
+    .inner{
+        position: relative;
+    }
+    
+   &:focus{
+        color: #4A4A4A;
+    } 
+    textarea{font-size: 30/@rem;width: 100%;margin-bottom:60/@rem; }
+    .t-info{position: absolute;right: 0;bottom: 0;line-height: 60/@rem;}
+}
 
-
-.ui-input {
+.ui-input-box {
     position: relative;
     margin: 0 24/@rem;
     padding-right: 60/@rem;
-    border-bottom: 2/@rem solid #EDEDED;
     line-height: 130/@rem;
-    color: #4A4A4A;
+    color: #999;
+    
+    &:focus{
+        color: #4A4A4A;
+    }
+
     .txt {
         width: 100%;
         line-height: 130/@rem;
@@ -365,6 +390,12 @@ body {
     padding: 28/@rem 23/@rem;
     color: #999;
     background: #f1f3f4;
+}
+
+.ui-coming-soon{
+    text-align: center;
+    .iconfont{font-size: 54/@rem;margin-bottom: 19/@rem;color: #DEDEDE;}
+    .cs-txt{font-size: 28/@rem;color: #999l}
 }
 
 .search-wrap {
@@ -436,6 +467,7 @@ body {
     line-height: 68/@rem;
     font-size: 36/@rem;
     margin-bottom: 2/@rem;
+    box-shadow: 0 0 30/@rem 30/@rem #FAF9F8;
     .left {
         position: absolute;
         left: 0;
@@ -451,18 +483,22 @@ body {
     }
 }
 
-.content-area {}
-
 .foot-area {}
 
 .ui-article {
+    padding: 30/@rem 23/@rem 0;
     p {
         text-indent: 60/@rem;
+        line-height: 40/@rem;
+    }
+    .img-box{
+        padding: 29/@rem 0;
+        img{width: 100%;}
     }
 }
 
 .ui-list {
-    .list-item {
+    .l-item {
         position: relative;
         border: 2/@rem solid #F1F3F4;
         padding: 26/@rem 24/@rem;
@@ -559,6 +595,7 @@ body {
     }
 }
 
+<<<<<<< HEAD
 .ui-display{
     .display-hd{
         overflow: hidden;
@@ -582,6 +619,11 @@ body {
 
 /* =E UI Component style 
 ==================================*/
+=======
+.ui-input-list{
+
+}
+>>>>>>> 31f77ed93abe3a051b394a831d65849f7dc62228
 
 /* =S content style 
 ==================================*/
@@ -764,16 +806,15 @@ body {
 
 //  =S 消息
 .ui-tab {
-    overflow: hidden;
     box-shadow: 0 10/@rem 10/@rem #FAF9F8;
     background: #fff;
     padding-top: 43/@rem;
     padding-bottom: 43/@rem;
     margin-bottom: 10/@rem;
+    display: flex;
 
-    li {
-        float: left;
-        width: 50%;
+    .t-item {
+        flex:1;
         font-size: 36/@rem;
         text-align: center;
         &.cur {
@@ -796,7 +837,8 @@ body {
                 em {
                     position: absolute;
                     bottom: 0;
-                    left: 30/@rem;
+                    left: 50%;
+                    margin-left: -40/@rem;
                     width: 80/@rem;
                     height: 4/@rem;
                     background: @mainColor;
@@ -1130,6 +1172,7 @@ body {
     }
     
 }
+<<<<<<< HEAD
 
 .cont-page-banner{
     height: 404/@rem;
@@ -1141,3 +1184,31 @@ body {
     margin:0 24/@rem;
 }
 .cont-wrap-p{padding:0 24/@rem;}
+=======
+.blank{height: 294/@rem;}
+.cont-personal-info{
+    margin-bottom: 9/@rem;
+    .img-wrap{position: relative;top:-50/@rem;border-radius: 100%;
+        img{width: 100/@rem;height: 100/@rem;}
+    }
+    .name{
+        color: #4A4A4A;font-size: 34/@rem; line-height: 34/@rem;
+        margin-bottom: 21/@rem;
+        .icon{
+            vertical-align: top;
+            display:inline-block;width: 32/@rem;height: 32/@rem;
+            background: url(../../img/man.png) no-repeat;
+            background-size: cover;
+            &.man{background: url('../../img/man.png') no-repeat;}
+            &.woman{background: url(../../img/woman.png) no-repeat;}
+        }
+    }
+    .birthday{color: #4A4A4A;margin-bottom: 17/@rem;line-height: 24/@rem;
+        .icon{
+            display:inline-block;width: 26/@rem;height: 26/@rem;
+            background: url('../../img/cake.png') no-repeat;
+        }
+    }
+    .speech{color: #999;line-height: 25/@rem;padding-bottom: 48/@rem;}
+}
+>>>>>>> 31f77ed93abe3a051b394a831d65849f7dc62228

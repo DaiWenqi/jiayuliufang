@@ -201,6 +201,10 @@ body {
     background-size: contain;
 }
 
+.bg-pic-page{
+
+}
+
 .mg-s {
     border-bottom: 10/@rem solid #F1F3F4;
 }
@@ -511,8 +515,28 @@ body {
             }
         }
     }
-}
+    
+    // 三列布局
+    &.col-3{
+        display: flex;
+        flex-wrap:wrap;
 
+        .list-item{
+            // float: left;
+            padding: 0;
+            background: #F1F3F4;
+                width: calc(100%/3);
+            &:before{
+                padding-top: 100%;
+            }
+        }
+    }
+}
+.ui-pictxt-box{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
 .ui-arrow-list{
     padding:0 20/@rem;
     .al-item{
@@ -535,7 +559,29 @@ body {
     }
 }
 
+.ui-display{
+    .display-hd{
+        overflow: hidden;
+        color: #4A4A4A;
+        padding: 30/@rem 0;
+        .left{
+            float: left;            
+        }
+        .display-hd-title{font-size: 36/@rem;font-weight: 700;height: 38/@rem;line-height: 38/@rem;}
 
+        .right{float: right;
+            .iconfont{font-size: 24px;}
+        }
+    }
+    .display-bd{
+        padding: 30/@rem 24/@rem 0;
+        // width: 672/@rem;
+        overflow: hidden;
+    }
+}
+
+/* =E UI Component style 
+==================================*/
 
 /* =S content style 
 ==================================*/
@@ -1084,3 +1130,14 @@ body {
     }
     
 }
+
+.cont-page-banner{
+    height: 404/@rem;
+    overflow: hidden;
+    img{width: 100%;}
+}
+
+.cont-wrap{
+    margin:0 24/@rem;
+}
+.cont-wrap-p{padding:0 24/@rem;}

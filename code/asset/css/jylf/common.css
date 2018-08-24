@@ -136,10 +136,6 @@ h3 {
   font-weight: normal;
 }
 /* LESS */
-body,
-html {
-  height: 100%;
-}
 body {
   background: #F1F3F4;
 }
@@ -279,9 +275,7 @@ body {
 /* =S UI Component style 
 ==================================*/
 .container {
-  position: absolute;
-  top: 0;
-  bottom: 0;
+  margin-top: 1.11111111rem;
   width: 100%;
   font-size: 0.66666667rem;
 }
@@ -397,9 +391,7 @@ body {
 }
 .head-area {
   text-align: center;
-  height: 1.51111111rem;
-  line-height: 1.51111111rem;
-  font-size: 0.8rem;
+  height: 2.13333333rem;
   margin-bottom: 0.04444444rem;
   box-shadow: 0 0 0.66666667rem 0.66666667rem #FAF9F8;
 }
@@ -407,9 +399,9 @@ body {
   position: absolute;
   left: 0;
   width: 1.51111111rem;
-  font-size: 0.84444444rem;
+  font-size: 0.8rem;
   text-align: center;
-  line-height: 1.51111111rem;
+  line-height: 2.13333333rem;
 }
 .head-area .right {
   position: absolute;
@@ -547,7 +539,6 @@ body {
 /* =S content style 
 ==================================*/
 #login {
-  background: url(../../img/bg.png) no-repeat;
   background-size: cover;
 }
 #login .title-area {
@@ -583,12 +574,15 @@ body {
 }
 #login .content-area h2 {
   text-align: center;
-  font-size: 1.42222222rem;
+  font-size: 1.33333333rem;
   font-family: PingFang-SC-Bold;
   color: #D3A460;
   font-weight: 500;
-  margin-top: 211px;
-  padding-bottom: 70px;
+  margin-top: 2.6rem;
+  padding-bottom: 2.44444444rem;
+}
+#login .content-area .ui-linkbtn {
+  font-size: 0.66666667rem;
 }
 #login .content-area .other-login {
   padding-top: 4.66666667rem;
@@ -597,7 +591,8 @@ body {
   color: #999;
   text-align: center;
   font-size: 0.66666667rem;
-  margin-bottom: 1.33333333rem;
+  line-height: 1.06666667rem;
+  margin-bottom: 1.31111111rem;
 }
 #login .content-area .other-login p {
   text-align: center;
@@ -638,12 +633,16 @@ body {
 #login .complete-registration .ui-linkbtn {
   margin-bottom: 0.62222222rem;
 }
+#login .head-area {
+  box-shadow: none;
+}
 #login .foot-area {
-  position: absolute;
-  bottom: 55px;
-  width: 100%;
+  padding-top: 6.57777778rem;
+  padding-bottom: 1.22222222rem;
   text-align: center;
   font-size: 0.62222222rem;
+  line-height: 1.06666667rem;
+  height: 0.64444444rem;
 }
 #login .tab {
   padding-top: 1.11111111rem;

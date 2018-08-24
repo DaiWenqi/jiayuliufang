@@ -4,14 +4,24 @@
 	<meta charset="UTF-8">
 	<title>家语流芳</title>
 	<link rel="stylesheet" href="../../asset/css/jylf/common.css">
-	<script type="text/javascript">
-		var pixclPatio = 1 / window.devicePixelRatio;
-			document.write('<meta name="viewport" content="width=device-width,initial-scale='+pixclPatio+',minimum-scale='+pixclPatio+',maximum-scale='+pixclPatio+',user-scalable=no" />');
-			var html = document.getElementsByTagName('html')[0];
-			var pageWidth = html.getBoundingClientRect().width;
-			html.style.fontSize = pageWidth / 16 + 'px';
+	 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui">
+	<script>
+    (function (doc, win) {
+      var docEl = doc.documentElement,
+        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+        recalc = function() {
+          var clientWidth = docEl.clientWidth;
+          if (!clientWidth) {
+            return;
+          }
+          docEl.style.fontSize = Math.min(640, Math.max(docEl.clientWidth, 320)) / 320 * 14 + 'px';
+        };
 
-	</script>
+      if (!doc.addEventListener) return;
+      win.addEventListener(resizeEvt, recalc, false);
+      doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+    </script>
 </head>
 <body>
 	<div class="container">

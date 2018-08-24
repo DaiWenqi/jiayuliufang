@@ -161,9 +161,6 @@ h3 {
 
 
 
-
-
-
 /* LESS */
 
 //变量 定义rem大小，并设置单位
@@ -171,10 +168,11 @@ h3 {
 @mainColor: #D3A460;
 
 
-body,
-html {
-    height: 100%;
-}
+// body,
+// html {
+//     height: 100%;
+//     overflow: hidden;
+// }
 
 body {
     background: #F1F3F4;
@@ -340,9 +338,9 @@ body {
 ==================================*/
 
 .container {
-    position: absolute;
-    top: 0;
-    bottom: 0; // padding-top: 50/@rem;
+    margin-top: 50/@rem;
+    // position: relative;
+    // top: 55/@rem;
     width: 100%;
     font-size: 30/@rem;
 }
@@ -463,18 +461,16 @@ body {
 
 .head-area {
     text-align: center;
-    height: 68/@rem;
-    line-height: 68/@rem;
-    font-size: 36/@rem;
+    height: 96/@rem;
     margin-bottom: 2/@rem;
     box-shadow: 0 0 30/@rem 30/@rem #FAF9F8;
     .left {
         position: absolute;
         left: 0;
         width: 68/@rem;
-        font-size: 38/@rem;
+        font-size: 36/@rem;
         text-align: center;
-        line-height: 68/@rem; // background: url(../../img/back.png) no-repeat center;
+        line-height: 96/@rem; // background: url(../../img/back.png) no-repeat center;
     }
     .right {
         position: absolute;
@@ -628,7 +624,6 @@ body {
 
 // 登陆
 #login {
-    background: url(../../img/bg.png) no-repeat;
     background-size: cover;
     .title-area {
         padding-top: 66/@rem;
@@ -666,14 +661,14 @@ body {
         padding: 0 11%;
         h2 {
             text-align: center;
-            font-size: 64/@rem;
+            font-size: 60/@rem;
             font-family: PingFang-SC-Bold;
             color: @mainColor;
             font-weight: 500;
-            margin-top: 211px;
-            padding-bottom: 70px;
+            margin-top: 117/@rem;
+            padding-bottom: 110/@rem;
         }
-        .link-btn {}
+        .ui-linkbtn {font-size: 30/@rem;}
 
         .other-login {
             padding-top: 210/@rem;
@@ -681,7 +676,8 @@ body {
                 color: #999;
                 text-align: center;
                 font-size: 30/@rem;
-                margin-bottom: 60/@rem;
+                line-height: 48/@rem;
+                margin-bottom: 59/@rem;
             }
             p {
                 text-align: center;
@@ -726,13 +722,15 @@ body {
             margin-bottom: 28/@rem;
         }
     }
+    .head-area{box-shadow: none;}
 
     .foot-area {
-        position: absolute;
-        bottom: 55px;
-        width: 100%;
+        padding-top: 296/@rem;
+        padding-bottom: 55/@rem;
         text-align: center;
         font-size: 28/@rem;
+        line-height: 48/@rem;
+        height: 29/@rem;
     }
 
     .tab {

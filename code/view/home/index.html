@@ -3,11 +3,12 @@
 <head>
 	<meta charset="UTF-8">
 	<title>家语流芳</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui">
 	<link rel="stylesheet" href="../../asset/css/jylf/common.css">
 	<script type="text/javascript" src="../../asset/script/common.js"></script>
 </head>
-<body class="bgPic-2">
-	<div class="container bg-white">
+<body class="bg-white">
+	<div class="container">
 		<div class="cont-page-banner">
 			<img src="https://via.placeholder.com/720x404/d2b488/fff?text=photo" alt="">
 		</div>
@@ -21,26 +22,50 @@
 				<ul class="ui-list col-3">
 					<li class="list-item">
 						<div class="ui-pictxt-box">
-							<img src="https://via.placeholder.com/82x82/d2b488/fff?text=icon" alt="">
-							<p>家语</p>
+							<div class="inner">
+								<img src="https://via.placeholder.com/82x82/d2b488/fff?text=icon" alt="">
+								<p>家语</p>
+								</div>
 						</div>
 					</li>
 					<li class="list-item">
-						<div class="ui-pic-txt">
-							<img src="https://via.placeholder.com/100x100/d2b488/fff?text=icon" alt="">
-							<p>家语</p>
+						<div class="ui-pictxt-box">
+							<div class="inner">
+								<img src="https://via.placeholder.com/100x100/d2b488/fff?text=icon" alt="">
+							<p>时光轴</p>
+							</div>
 						</div>
 					</li>
 					<li class="list-item">
-						<div class="ui-pic-txt">
-							<img src="https://via.placeholder.com/100x100/d2b488/fff?text=icon" alt="">
-							<p>家语</p>
+						<div class="ui-pictxt-box">
+							<div class="inner">
+								<img src="https://via.placeholder.com/100x100/d2b488/fff?text=icon" alt="">
+							<p>家人</p>
+							</div>
 						</div>
 					</li>
 					<li class="list-item">
-						<div class="ui-pic-txt">
-							<img src="https://via.placeholder.com/100x100/d2b488/fff?text=icon" alt="">
-							<p>家语</p>
+						<div class="ui-pictxt-box">
+							<div class="inner">
+								<img src="https://via.placeholder.com/100x100/d2b488/fff?text=icon" alt="">
+								<p>家族相册</p>
+							</div>
+						</div>
+					</li>
+					<li class="list-item">
+						<div class="ui-pictxt-box">
+							<div class="inner">
+								<img src="https://via.placeholder.com/100x100/d2b488/fff?text=icon" alt="">
+								<p>家聚</p>
+							</div>
+						</div>
+					</li>
+					<li class="list-item">
+						<div class="ui-pictxt-box">
+							<div class="inner">
+								<img src="https://via.placeholder.com/100x100/d2b488/fff?text=icon" alt="">
+								<p>本月寿星</p>
+							</div>
 						</div>
 					</li>
 				</ul>
@@ -92,10 +117,35 @@
 					</div>
 				</li>
 			</ul>
-			<p class="f-ft">非家族成员，只能看最近3条动态</p>
 		</div>
-		<div class="cont-apply"><span>申请加入</span></div>	
+		<ul class="ui-operation-foot">
+			<li>
+				<p><img src="" alt=""></p>
+				<p>首页</p>
+			</li>
+			<li>
+				<p><img src="" alt=""></p>
+				<p>发现</p>
+			</li>
+			<li class="publish">
+				<div><i>+</i></div>
+			</li>
+			<li>
+				<p><img src="" alt=""></p>
+				<p>消息</p>
+			</li>
+			<li>
+				<p><img src="" alt=""></p>
+				<p>我的</p>
+			</li>
+		</ul>
 
 	</div>	
+	<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.js"></script>
+	<script>
+		$(".ui-list.col-3 .list-item").each(function(i){
+			$(this).height($(this).width())
+		})
+	</script>
 </body>
 </html>

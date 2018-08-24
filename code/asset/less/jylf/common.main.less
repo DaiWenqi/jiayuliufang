@@ -566,8 +566,11 @@ body {
 }
 .ui-pictxt-box{
     display: flex;
+    height: 100%;
     align-items: center;
-    flex-direction: column;
+    justify-content:center;
+    text-align: center;  
+    border-radius:10/@rem;
 }
 .ui-arrow-list{
     padding:0 20/@rem;
@@ -606,9 +609,9 @@ body {
         }
     }
     .display-bd{
-        padding: 30/@rem 24/@rem 0;
-        // width: 672/@rem;
-        overflow: hidden;
+        .ui-list{
+            .list-item{border-width: 0 18/@rem 20/@rem 0;border: solid #fff;}
+        }
     }
 }
 
@@ -887,8 +890,6 @@ body {
 
 .ui-operation-foot {
     display: flex;
-    position: absolute;
-    bottom: 0;
     width: 100%;
     background: #fff;
     padding: 8/@rem 0;

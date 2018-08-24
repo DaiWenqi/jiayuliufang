@@ -484,8 +484,11 @@ body {
 }
 .ui-pictxt-box {
   display: flex;
+  height: 100%;
   align-items: center;
-  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  border-radius: 0.22222222rem;
 }
 .ui-arrow-list {
   padding: 0 0.44444444rem;
@@ -530,9 +533,9 @@ body {
 .ui-display .display-hd .right .iconfont {
   font-size: 24px;
 }
-.ui-display .display-bd {
-  padding: 0.66666667rem 0.53333333rem 0;
-  overflow: hidden;
+.ui-display .display-bd .ui-list .list-item {
+  border-width: 0 0.4rem 0.44444444rem 0;
+  border: solid #fff;
 }
 /* =E UI Component style 
 ==================================*/
@@ -775,8 +778,6 @@ body {
 }
 .ui-operation-foot {
   display: flex;
-  position: absolute;
-  bottom: 0;
   width: 100%;
   background: #fff;
   padding: 0.17777778rem 0;

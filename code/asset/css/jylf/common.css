@@ -786,6 +786,37 @@ body {
   flex: 1;
   text-align: center;
 }
+.ui-operation-foot li.cur .jia {
+  background-image: url(../../img/jia-2.png);
+}
+.ui-operation-foot li.cur .yu {
+  background-image: url(../../img/yu-2.png);
+}
+.ui-operation-foot li.cur .liu {
+  background-image: url(../../img/liu-2.png);
+}
+.ui-operation-foot li.cur .fang {
+  background-image: url(../../img/fang-2.png);
+}
+.ui-operation-foot .pic {
+  width: 1.22222222rem;
+  height: 1.22222222rem;
+  margin: 0 auto;
+  background: url(../../img/jia.png) no-repeat;
+  background-size: contain;
+}
+.ui-operation-foot .jia {
+  background-image: url(../../img/jia.png);
+}
+.ui-operation-foot .yu {
+  background-image: url(../../img/yu.png);
+}
+.ui-operation-foot .liu {
+  background-image: url(../../img/liu.png);
+}
+.ui-operation-foot .fang {
+  background-image: url(../../img/fang.png);
+}
 .ui-operation-foot .publish {
   background: #fff;
   color: #D3A460;

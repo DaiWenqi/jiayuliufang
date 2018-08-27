@@ -1,0 +1,158 @@
+
+
+.photo-display {
+    .hd {
+        font-size: @fs-m;
+        line-height: 48px;
+        padding: 0 24/@rem;
+    }
+    .bd {
+        padding-bottom: 40/@rem;
+        border-bottom: 1/@rem solid #EDEDED;
+        .list {
+            overflow: hidden;
+            padding-left: 24/@rem;
+            .list-item {
+
+                 // width: 208/@rem;height: 208/@rem; 
+                float: left;
+                margin-right: 24/@rem;
+                margin-bottom: 24/@rem;
+                color: #fff;
+                img {
+                    width: 100%;
+                    border-radius: 10/@rem;
+                }
+                
+                .more {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    text-align: center;
+                    .mask {
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: #000;
+                        opacity: 0.3;
+                        border-radius: 10/@rem;
+                    }
+                    .txt {
+                        position: relative;
+                        z-index: 2;
+                        top: 25/@rem;
+                        line-height: normal;
+                        text-align: center;
+                        font-size: 60/@rem;
+                        width: 60/@rem;
+                        color: #fff;
+                    }
+                }
+            }
+            .list-item-title {
+            	margin-top: 20px;
+                color: #666;
+                font-size: 15px;
+            }
+            .list-item-title.single-row {
+                line-height: 45px;
+            }
+            .list-item-info {
+                color: #999;
+            }
+
+            .pic-box {
+                position: relative;
+                width: 208/@rem;
+                height: 208/@rem;
+                background: #F1F3F4;
+                border-radius: 10/@rem;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+
+                .more {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    text-align: center;
+                    .mask {
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: #000;
+                        opacity: 0.3;
+                        border-radius: 10/@rem;
+                    }
+                    .txt {
+                        position: relative;
+                        z-index: 2;
+                        top: 25/@rem;
+                        line-height: normal;
+                        text-align: center;
+                        font-size: 60/@rem;
+                        width: 60/@rem;
+                        color: #fff;
+                    }
+                }
+                .icon-video {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    height: 100%;
+                    width: 100%;
+                    background: url(../../img/video.png) no-repeat center center;
+                    background-size: 60/@rem 60/@rem;
+                    background-color: rgba(0, 0, 0, .2);
+                }
+                .icon-add {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    height: 100%;
+                    width: 100%;
+                    background: url(../../img/add.png) no-repeat center center;
+                    background-size: 50/@rem 50/@rem;
+                }
+                .info-bar {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    padding-right: 24/@rem;
+                    padding-left: 12/@rem;
+                    border-radius: 0px 20px 0px 10px;
+                    background: rgba(0, 0, 0, .3);
+                    .favour {
+                        .active {
+                            color: #FF7676;
+                        }
+                    }
+                }
+            }
+
+            .classify.pic-box {
+                width: 180/@rem;
+                height: 180/@rem;
+                padding: 10/@rem 0 0 10/@rem;
+                overflow: hidden;
+                background: #F1F3F4;
+                img {
+                    float: left;
+                    width: 75/@rem;
+                    height: 75/@rem;
+                    border-radius: 8/@rem;
+                    margin: 0 10/@rem 10/@rem 0;
+                }
+            }
+        }
+    }
+}

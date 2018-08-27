@@ -10,20 +10,19 @@
 <body class="bg-white">
 	<div class="container">
 		<div class="cont-page-banner">
-			<img src="https://via.placeholder.com/720x404/d2b488/fff?text=photo" alt="">
 		</div>
 
-		<div class="ui-display">
+		<div class="home-display">
 			<div class="display-hd cont-wrap">
 				<div class="left"><span class="display-hd-title">张志远，欢迎回家</span></div>
-				<div class="right"><span>张氏家族</span><i class="iconfont">&#xe600;</i></div>
+				<div class="right"><span class="display-hd-title"></span><span>张氏家族</span> <i class="iconfont">&#xe600;</i></div>
 			</div>
 			<div class="display-bd">
 				<ul class="ui-list col-3">
 					<li class="list-item">
 						<div class="ui-pictxt-box">
 							<div class="inner">
-								<img src="https://via.placeholder.com/82x82/d2b488/fff?text=icon" alt="">
+								<img src="../../asset/img/home-jiayu.png" alt="">
 								<p>家语</p>
 								</div>
 						</div>
@@ -31,7 +30,7 @@
 					<li class="list-item">
 						<div class="ui-pictxt-box">
 							<div class="inner">
-								<img src="https://via.placeholder.com/100x100/d2b488/fff?text=icon" alt="">
+								<img src="../../asset/img/home-shiguang.png" alt="">
 							<p>时光轴</p>
 							</div>
 						</div>
@@ -39,7 +38,7 @@
 					<li class="list-item">
 						<div class="ui-pictxt-box">
 							<div class="inner">
-								<img src="https://via.placeholder.com/100x100/d2b488/fff?text=icon" alt="">
+								<img src="../../asset/img/home-jiaren.png" alt="">
 							<p>家人</p>
 							</div>
 						</div>
@@ -47,7 +46,7 @@
 					<li class="list-item">
 						<div class="ui-pictxt-box">
 							<div class="inner">
-								<img src="https://via.placeholder.com/100x100/d2b488/fff?text=icon" alt="">
+								<img src="../../asset/img/home-xiangce.png" alt="">
 								<p>家族相册</p>
 							</div>
 						</div>
@@ -55,7 +54,7 @@
 					<li class="list-item">
 						<div class="ui-pictxt-box">
 							<div class="inner">
-								<img src="https://via.placeholder.com/100x100/d2b488/fff?text=icon" alt="">
+								<img src="../../asset/img/home-jiaju.png" alt="">
 								<p>家聚</p>
 							</div>
 						</div>
@@ -63,7 +62,7 @@
 					<li class="list-item">
 						<div class="ui-pictxt-box">
 							<div class="inner">
-								<img src="https://via.placeholder.com/100x100/d2b488/fff?text=icon" alt="">
+								<img src="../../asset/img/home-shouxing.png" alt="">
 								<p>本月寿星</p>
 							</div>
 						</div>
@@ -81,15 +80,16 @@
 						<div class="left">
 							<img src="https://via.placeholder.com/80x80/d2b488/fff?text=photo" alt=""> <span>张演</span>
 						</div>
-						<div class="right"><span>刚刚</span></div>
+						<div class="right"><span class="time">刚刚</span></div>
 					</div>
 					<div class="bd">
 						<ul class="pic-list">
-							<li><img src="https://via.placeholder.com/216x204/d2b488/fff?text=pic" alt=""></li>
-							<li><img src="https://via.placeholder.com/216x204/d2b488/fff?text=pic" alt=""></li>
-							<li><img src="https://via.placeholder.com/216x204/d2b488/fff?text=pic" alt=""></li>
-							<li><img src="https://via.placeholder.com/216x204/d2b488/fff?text=pic" alt=""></li>
-							<li><img src="https://via.placeholder.com/216x204/d2b488/fff?text=pic" alt=""><div class="more"><em></em><span>6</span></div></li>
+							<li><img src="../../asset/img/timg.jpg" alt=""></li>
+							<li><img src="../../asset/img/timg.jpg" alt=""></li>
+							<li><img src="../../asset/img/timg.jpg" alt=""></li>
+							<li><img src="../../asset/img/timg.jpg" alt=""></li>
+							<li><img src="../../asset/img/timg.jpg" alt=""></li>
+							<li><img src="../../asset/img/timg.jpg" alt=""><div class="more js-more"><em></em><span>6</span></div></li>
 						</ul>
 					</div>
 				</li>
@@ -103,6 +103,7 @@
 					</div>
 					<div class="bd">
 						<ul class="pic-list">
+							<li><img src="https://via.placeholder.com/216x204/d2b488/fff?text=pic" alt=""></li>
 							<li><img src="https://via.placeholder.com/216x204/d2b488/fff?text=pic" alt=""></li>
 							<li><img src="https://via.placeholder.com/216x204/d2b488/fff?text=pic" alt=""></li>
 							<li><img src="https://via.placeholder.com/216x204/d2b488/fff?text=pic" alt=""></li>
@@ -140,6 +141,15 @@
 	<script>
 		$(".ui-list.col-3 .list-item").each(function(i){
 			$(this).height($(this).width())
+		})
+		$(".cont-family .pic-list img").each(function(i){
+			$(this).height($(this).width())
+		})
+
+		$('.js-more').on('click',function(){
+			
+			$(this).parents('.pic-list').append('<li><img src="../../asset/img/timg.jpg" alt=""></li>')
+			$(this).remove();
 		})
 	</script>
 </body>

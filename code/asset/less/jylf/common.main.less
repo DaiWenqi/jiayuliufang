@@ -169,11 +169,10 @@ h3 {
 
 
 
-// body,
-// html {
-//     height: 100%;
-//     overflow: hidden;
-// }
+body,
+html {
+    height: 100%;
+}
 body {
     background: #F1F3F4;
 }
@@ -369,25 +368,22 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-
-
-
-
-
-
-
-
 /* =S UI Component style 
 ==================================*/
 
 .container {
     min-width: 320px;
     max-width: 750px;
-    margin: 50/@rem auto 0;
+    margin: 0 auto;
+    padding-top: 50px;
+    height: 100%;
     font-size: 30/@rem;
     position: relative;
+    display: flex;
+    flex-direction:column;
 }
-
+.content-area{flex:1;}
+.footer-area{height: 53px;}
 .ui-input {
     color: #999;
     &:focus {
@@ -1004,6 +1000,10 @@ body {
 }
 
 .ui-operation-foot {
+    // position: absolute;
+    // bottom: 0;
+    // left: 0;
+    width: 100%;
     display: flex;
     width: 100%;
     background: #fff;

@@ -5,6 +5,9 @@
   src: url('../../font/iconfont.eot');
   src: url('../../font/iconfont.eot?#iefix') format('embedded-opentype'), url('../../font/iconfont.woff') format('woff'), url('../../font/iconfont.ttf') format('truetype'), url('../../font/iconfont.svg#iconfont') format('svg');
 }
+.mr-48 {
+  margin-right: 24px;
+}
 .photo-display .hd {
   font-size: 18px;
   line-height: 48px;
@@ -442,7 +445,6 @@ body {
   min-width: 320px;
   max-width: 750px;
   margin: 0 auto;
-  padding-top: 50px;
   height: 100%;
   font-size: 15px;
   position: relative;
@@ -586,7 +588,6 @@ body {
   position: absolute;
   right: 12px;
   top: 0;
-  width: 34px;
   font-size: 15px;
 }
 .head-area .right .iconfont {
@@ -1777,13 +1778,18 @@ body {
 .change-light-box {
   position: relative;
   color: #fff;
+  height: 100%;
+}
+.change-light-box .change-light-list {
+  height: 100%;
 }
 .change-light-box .change-light-item {
-  height: 519px;
+  height: 100%;
   overflow: hidden;
   position: relative;
 }
 .change-light-box .change-light-item img {
+  height: 100%;
   width: 100%;
 }
 .change-light-box .change-light-info {

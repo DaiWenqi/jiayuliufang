@@ -375,7 +375,7 @@ body {
     min-width: 320px;
     max-width: 750px;
     margin: 0 auto;
-    padding-top: 50px;
+    // padding-top: 50px;
     height: 100%;
     font-size: 30/@rem;
     position: relative;
@@ -529,7 +529,6 @@ body {
         position: absolute;
         right: 24/@rem;
         top: 0;
-        width: 68/@rem;
         font-size: @fs-default;
         .iconfont {
             font-size: @fs-m;
@@ -1908,11 +1907,15 @@ body {
 .change-light-box {
     position: relative;
     color: #fff;
+    height: 100%;
+    .change-light-list{height: 100%;}
     .change-light-item {
-        height: 1038/@rem;
+        // height: 1038/@rem;
+        height: 100%;
         overflow: hidden;
         position: relative;
         img {
+            height: 100%;
             width: 100%;
         }
     }
@@ -1963,3 +1966,5 @@ body {
         }
     }
 }
+
+@import './pages/family-member';

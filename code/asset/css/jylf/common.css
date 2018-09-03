@@ -8,6 +8,15 @@
 .mr-48 {
   margin-right: 24px;
 }
+.mr-24 {
+  margin-right: 24px;
+}
+.no-border {
+  border: none;
+}
+.pt-10 {
+  padding-top: 10px;
+}
 .photo-display .hd {
   font-size: 18px;
   line-height: 48px;
@@ -406,7 +415,8 @@ body {
 }
 .ui-linkbtn-2 {
   display: inline-block;
-  padding: 5px 16px;
+  padding: 0 15px;
+  line-height: 34px;
   border-radius: 16px;
   color: #D3A460;
   border: 1px solid #D3A460;
@@ -445,17 +455,16 @@ body {
   min-width: 320px;
   max-width: 750px;
   margin: 0 auto;
-  height: 100%;
+  padding-bottom: 53px;
   font-size: 15px;
   position: relative;
-  display: flex;
-  flex-direction: column;
-}
-.content-area {
-  flex: 1;
 }
 .footer-area {
   height: 53px;
+  position: fixed;
+  z-index: 9;
+  bottom: 0;
+  left: 0;
 }
 .ui-input {
   color: #999;
@@ -569,29 +578,39 @@ body {
 }
 .head-area {
   position: relative;
-  text-align: center;
-  height: 48px;
-  line-height: 48px;
-  margin-bottom: 1px;
+  z-index: 10;
+  padding-top: 40px;
+  padding-bottom: 15px;
 }
 .head-area .left {
-  position: absolute;
-  left: 0;
-  width: 34px;
-  font-size: 19px;
-  text-align: center;
+  float: left;
+  padding: 0 8px;
 }
 .head-area .center {
   font-size: 18px;
+  width: 60%;
+  margin: 0 auto;
+  line-height: 18px;
+  height: 18px;
+  display: block;
+  text-align: center;
 }
 .head-area .right {
   position: absolute;
   right: 12px;
-  top: 0;
+  top: 40px;
+  width: 34px;
   font-size: 15px;
 }
 .head-area .right .iconfont {
   font-size: 18px;
+}
+.foot-area {
+  height: 53px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
 }
 .ui-article {
   padding: 15px 11.5px 0;
@@ -698,10 +717,13 @@ body {
   line-height: 55px;
   font-size: 14.5px;
 }
+.home-display {
+  margin-bottom: 26.5px;
+}
 .home-display .display-hd {
   overflow: hidden;
   color: #4A4A4A;
-  padding: 7.5px 0;
+  padding: 14.5px 0 15px 0;
 }
 .home-display .display-hd .left {
   float: left;
@@ -714,7 +736,6 @@ body {
 }
 .home-display .display-hd .right {
   float: right;
-  padding-top: 5px;
   font-size: 15px;
   vertical-align: bottom;
 }
@@ -732,7 +753,6 @@ body {
 }
 .home-display .display-bd .ui-list.col-3 .list-item {
   border-radius: 5px;
-  maring: 0 12px 12px 0;
   background: #F1F3F4;
   width: calc(100%/3);
 }
@@ -791,7 +811,7 @@ body {
   margin: 50px 0;
 }
 #login .content-area .ui-linkbtn {
-  font-size: 15px;
+  font-size: 18px;
 }
 #login .content-area .other-login {
   padding-top: 100px;
@@ -844,7 +864,7 @@ body {
 #login .head-area {
   box-shadow: none;
 }
-#login .foot-area {
+#login .no-account {
   padding-top: 100px;
   padding-bottom: 27.5px;
   text-align: center;
@@ -856,9 +876,11 @@ body {
 #login .tab {
   padding-top: 25px;
   display: flex;
+  justify-content: center;
+  font-weight: 700;
 }
 #login .tab a {
-  flex: 1;
+  padding: 0 15px;
   text-align: center;
   color: #999;
   font-size: 24px;
@@ -872,13 +894,19 @@ body {
   font-size: 15px;
 }
 #login .input-area .iconfont {
-  font-size: 16px;
+  font-size: 18px;
 }
 #login .input-area .ui-dl {
   margin-top: 50px;
 }
+#login .input-area .ui-dl .dt .iconfont {
+  margin-right: 8px;
+  vertical-align: bottom;
+}
 #login .input-area .ui-dl .dd {
   margin-top: 30px;
+  padding-bottom: 9.5px;
+  border-bottom: 1px solid #EDEDED;
 }
 #login .input-area .password .dd {
   position: relative;
@@ -958,6 +986,7 @@ body {
   width: 40px;
   height: 40px;
   float: left;
+  vertical-align: middle;
   margin-right: 10px;
 }
 .msg-item .detail {
@@ -993,6 +1022,10 @@ body {
   flex: 1;
   text-align: center;
 }
+.ui-operation-foot p {
+  font-size: 11px;
+  line-height: 19px;
+}
 .ui-operation-foot li.cur .jia {
   background-image: url(../../img/jia-2.png);
 }
@@ -1008,7 +1041,7 @@ body {
 .ui-operation-foot .pic {
   width: 24px;
   height: 24px;
-  margin: 0 auto 5px;
+  margin: 0 auto;
   background: url(../../img/jia.png) no-repeat;
   background-size: contain;
 }
@@ -1113,7 +1146,7 @@ body {
   border-radius: 0 10px 0 10px;
 }
 .cont-family .f-title {
-  padding: 15px 0;
+  margin-bottom: 25px;
   background: #fff;
 }
 .cont-family .f-title p {
@@ -1147,32 +1180,32 @@ body {
 .cont-family .fl-item .line {
   height: 1px;
   background: #EDEDED;
-  width: 283.5px;
-  position: absolute;
-  top: 0;
+  margin-bottom: 24.5px;
 }
 .cont-family .fl-item .hd {
-  padding-top: 11.5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
 }
 .cont-family .fl-item .hd .left {
-  float: left;
   font-size: 15px;
+  display: flex;
+  align-items: center;
 }
 .cont-family .fl-item .hd .left img {
   vertical-align: middle;
   width: 45px;
   height: 45px;
   border-radius: 100%;
-}
-.cont-family .fl-item .hd .right {
-  float: right;
+  margin-right: 12px;
 }
 .cont-family .fl-item .hd .right span {
   color: #999999;
   font-size: 12px;
 }
 .cont-family .fl-item .bd {
-  padding: 10px 0 5.5px 0;
+  padding-bottom: 3px;
   width: 100%;
   overflow: hidden;
 }

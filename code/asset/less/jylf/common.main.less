@@ -309,7 +309,8 @@ body {
 
 .ui-linkbtn-2 {
     display: inline-block;
-    padding: 10/@rem 32/@rem;
+    padding: 0 30/@rem;
+    line-height: 68/@rem;
     border-radius: 32/@rem;
     color: #D3A460;
     border: 1px solid #D3A460;
@@ -375,12 +376,9 @@ body {
     min-width: 320px;
     max-width: 750px;
     margin: 0 auto;
-    padding-top: 50px;
-    height: 100%;
+    padding-bottom: 53px;
     font-size: 30/@rem;
     position: relative;
-    display: flex;
-    flex-direction:column;
 }
 .content-area{flex:1;}
 .footer-area{height: 53px;}
@@ -511,24 +509,25 @@ body {
 
 .head-area {
     position: relative;
-    text-align: center;
-    height: 48px;
-    line-height: 48px;
-    margin-bottom: 2/@rem; // box-shadow: 0 0 15px 15px #FAF9F8;
+    display: inline-block;
+    z-index: 10;
+    height: 18px;
+    line-height: 18px;
+    padding-top: 40px;
+    padding-bottom: 15px;
     .left {
-        position: absolute;
-        left: 0;
-        width: 68/@rem;
-        font-size: 19px;
-        text-align: center; // background: url(../../img/back.png) no-repeat center;
+        float: left;
+        padding: 0 8px;// background: url(../../img/back.png) no-repeat center;
     }
     .center {
         font-size: @fs-m;
+        width: 60%;
+        margin: 0 auto;
     }
     .right {
         position: absolute;
         right: 24/@rem;
-        top: 0;
+        top: 80/@rem;
         width: 68/@rem;
         font-size: @fs-default;
         .iconfont {
@@ -537,7 +536,13 @@ body {
     }
 }
 
-.foot-area {}
+.foot-area {
+    height: 53px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
 
 .ui-article {
     padding: 30/@rem 23/@rem 0;
@@ -661,16 +666,17 @@ body {
 }
 
 .home-display {
+    margin-bottom: 53/@rem;
     .display-hd {
         overflow: hidden;
         color: #4A4A4A;
-        padding: 15/@rem 0;
+        padding: 29/@rem 0 30/@rem 0;
 
         .left {
             float: left;
         }
         .display-hd-title {
-            font-size: 18px;
+            font-size: 36/@rem;
             font-weight: 700;
             height: 38/@rem;
             line-height: 38/@rem;
@@ -678,11 +684,10 @@ body {
 
         .right {
             float: right;
-            padding-top: 10/@rem;
-            font-size: 15px;
+            font-size: 30/@rem;
             vertical-align: bottom;
             .iconfont {
-                font-size: 12px;
+                font-size: 24/@rem;
             }
         }
     }
@@ -697,9 +702,7 @@ body {
                 flex-wrap: wrap;
                 padding: 0 24/@rem;
                 .list-item {
-                    // float: left;
                     border-radius: 10/@rem;
-                    maring: 0 24/@rem 24/@rem 0;
                     background: #F1F3F4;
                     width: calc(100%/3);
                     &:before {
@@ -779,7 +782,7 @@ body {
             margin: 50px 0;
         }
         .ui-linkbtn {
-            font-size: 30/@rem;
+            font-size: 36/@rem;
         }
 
         .other-login {
@@ -836,8 +839,8 @@ body {
     .head-area {
         box-shadow: none;
     }
-
-    .foot-area {
+    
+    .no-account {
         padding-top: 100px;
         padding-bottom: 55/@rem;
         text-align: center;
@@ -850,9 +853,11 @@ body {
     .tab {
         padding-top: 25px;
         display: flex;
+        justify-content:center;
+        font-weight: 700;
 
         a {
-            flex: 1;
+            padding: 0 30/@rem;
             text-align: center;
             color: #999;
             font-size: 48/@rem;
@@ -867,13 +872,18 @@ body {
         padding-bottom: 40px;
         font-size: 30/@rem;
         .iconfont {
-            font-size: 32/@rem;
+            font-size: 36/@rem;
         }
 
         .ui-dl {
             margin-top: 50px;
+            .dt{
+                .iconfont{margin-right: 16/@rem;vertical-align: bottom;}
+            }
             .dd {
                 margin-top: 30px;
+                padding-bottom: 19/@rem;
+                border-bottom: 1px solid #EDEDED;
             }
         }
 
@@ -1000,9 +1010,10 @@ body {
 }
 
 .ui-operation-foot {
-    // position: absolute;
-    // bottom: 0;
-    // left: 0;
+    position: fixed;
+    z-index: 9;
+    bottom: 0;
+    left: 0;
     width: 100%;
     display: flex;
     width: 100%;
@@ -1013,6 +1024,7 @@ body {
         flex: 1;
         text-align: center;
     }
+    p{font-size: 22/@rem;line-height: 38/@rem;}
     li.cur {
         .jia {
             background-image: url(../../img/jia-2.png);
@@ -1032,7 +1044,7 @@ body {
 
         width: 24px;
         height: 24px;
-        margin: 0 auto 10/@rem;
+        margin: 0 auto;
         background: url(../../img/jia.png) no-repeat;
         background-size: contain;
     }
@@ -1156,7 +1168,7 @@ body {
 .cont-family {
 
     .f-title {
-        padding: 15px 0;
+        margin-bottom: 50/@rem;
         background: #fff;
 
         p {
@@ -1192,25 +1204,29 @@ body {
         .line {
             height: 2/@rem;
             background: #EDEDED;
-            width: 567/@rem;
-            position: absolute;
-            top: 0;
+            // width: 567/@rem;
+            margin-bottom: 49/@rem;
         }
 
         .hd {
-            padding-top: 23/@rem; // line-height: 180/@rem;
+            display: flex;
+            justify-content:space-between;
+            align-items:center;
+            margin-bottom: 20/@rem;
             .left {
-                float: left;
                 font-size: @fs-default;
+                    display: flex;
+                align-items: center;
                 img {
                     vertical-align: middle;
-                    width: 45px;
-                    height: 45px;
+                    width: 90/@rem;
+                    height: 90/@rem;
                     border-radius: 100%;
+                    margin-right: 24/@rem;
+
                 }
             }
             .right {
-                float: right; // padding-top: 20px;
                 span {
                     color: #999999;
                     font-size: @fs-s;
@@ -1219,7 +1235,7 @@ body {
         }
 
         .bd {
-            padding: 20/@rem 0 11/@rem 0;
+            padding-bottom: 6/@rem;
             width: 100%;
             overflow: hidden;
             .pic-list {

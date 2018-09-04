@@ -1,9 +1,12 @@
 @charset "utf-8";
 @font-face {
   font-family: 'iconfont';
-  /* project id 797836 */
   src: url('../../font/iconfont.eot');
   src: url('../../font/iconfont.eot?#iefix') format('embedded-opentype'), url('../../font/iconfont.woff') format('woff'), url('../../font/iconfont.ttf') format('truetype'), url('../../font/iconfont.svg#iconfont') format('svg');
+}
+@font-face {
+  font-family: 'PingFangSC';
+  src: url('../../font/pingfang.ttf');
 }
 .mr-48 {
   margin-right: 24px;
@@ -168,6 +171,28 @@
   bottom: 0;
   left: 0;
 }
+.line {
+  height: 1px;
+  background: url();
+}
+.icon-phone {
+  background: url(../../img/icon-phone.png) no-repeat;
+}
+.icon-code {
+  background: url(../../img/icon-code.png) no-repeat;
+}
+.icon-lock {
+  background: url(../../img/icon-lock.png) no-repeat;
+}
+.icon {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  vertical-align: middle;
+  background-size: cover;
+  font-size: 0;
+  margin-right: 8px;
+}
 /* CSS Document */
 * {
   margin: 0px;
@@ -326,7 +351,7 @@ body {
   padding: 0 11.5px;
 }
 .bgPic {
-  background: url(../../img/bg.png) no-repeat;
+  background: url(../../img/bg.png) repeat-y;
   background-size: cover;
 }
 .bgPic-2 {
@@ -611,6 +636,7 @@ body {
   left: 0;
   bottom: 0;
   width: 100%;
+  z-index: 9;
 }
 .ui-article {
   padding: 15px 11.5px 0;
@@ -759,11 +785,45 @@ body {
 .home-display .display-bd .ui-list.col-3 .list-item:before {
   padding-top: 100%;
 }
+.home-display .display-bd .ui-list.col-3 .list-item .inner {
+  display: flex;
+  flex-direction: column;
+}
 .home-display .display-bd .ui-list.col-3 .list-item .inner img {
   width: 41px;
+  display: block;
+}
+.home-display .display-bd .ui-list.col-3 .list-item .inner .jy {
+  margin-bottom: 9px;
+}
+.home-display .display-bd .ui-list.col-3 .list-item .inner .sgz {
+  margin-bottom: 9.5px;
+}
+.home-display .display-bd .ui-list.col-3 .list-item .inner .jr {
+  margin-bottom: 9px;
+}
+.home-display .display-bd .ui-list.col-3 .list-item .inner .jzxc {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 5px;
+}
+.home-display .display-bd .ui-list.col-3 .list-item .inner .jj {
+  width: 54px;
+  height: 54px;
+  margin-bottom: 4.5px;
+}
+.home-display .display-bd .ui-list.col-3 .list-item .inner .bysx {
+  width: 45px;
+  height: 45px;
+  margin: 0 auto 7.5px;
+}
+.home-display .display-bd .ui-list.col-3 .list-item .inner.cur p {
+  color: #4A4A4A;
+  font-weight: 700;
 }
 .home-display .display-bd .ui-list.col-3 .list-item .inner p {
   font-size: 15px;
+  color: #ccc;
 }
 /* =E UI Component style 
 ==================================*/
@@ -875,15 +935,16 @@ body {
 }
 #login .tab {
   padding-top: 25px;
-  display: flex;
   justify-content: center;
   font-weight: 700;
 }
 #login .tab a {
-  padding: 0 15px;
   text-align: center;
   color: #999;
   font-size: 24px;
+}
+#login .tab a:nth-child(1) {
+  padding-right: 30px;
 }
 #login .tab a.cur {
   color: #D3A460;
@@ -911,12 +972,12 @@ body {
 #login .input-area .password .dd {
   position: relative;
 }
-#login .input-area .password input {
-  padding-right: 16px;
-}
-#login .input-area .password .icon {
+#login .input-area .password .dd .icon {
   position: absolute;
   right: 0;
+}
+#login .input-area .password input {
+  padding-right: 16px;
 }
 #login .input-area .auth-code input {
   margin-right: 51px;
@@ -1068,14 +1129,16 @@ body {
 .ui-operation-foot .publish i {
   font-size: 24px;
 }
-.ui-operation-foot .publish div {
+.ui-operation-foot .publish > div {
   border-radius: 100%;
   background: #fff;
   display: inline-block;
-  width: 40px;
-  height: 40px;
+  width: 47px;
+  height: 47.5px;
+  background: url(../../img/foot-add.png) no-repeat;
+  background-size: 100%;
   position: relative;
-  top: -11.5px;
+  top: -18px;
   line-height: 40px;
 }
 .system .ta-c {
@@ -1158,6 +1221,7 @@ body {
 }
 .cont-family .f-title span {
   font-size: 18px;
+  font-weight: 700;
   position: relative;
   z-index: 2;
 }
@@ -1190,6 +1254,7 @@ body {
 }
 .cont-family .fl-item .hd .left {
   font-size: 15px;
+  font-weight: 700;
   display: flex;
   align-items: center;
 }
@@ -1230,6 +1295,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 5px;
 }
 .cont-family .fl-item .bd .pic-list li .more {
   width: 100%;

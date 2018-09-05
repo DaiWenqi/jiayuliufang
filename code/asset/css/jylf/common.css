@@ -175,18 +175,8 @@
   bottom: 0;
   left: 0;
 }
-.line {
-  height: 1px;
-  background: url();
-}
-.icon-phone {
-  background: url(../../img/icon-phone.png) no-repeat;
-}
-.icon-code {
-  background: url(../../img/icon-code.png) no-repeat;
-}
-.icon-lock {
-  background: url(../../img/icon-lock.png) no-repeat;
+.underline {
+  background: url(../../img/line-1px.png) repeat-x 0 bottom;
 }
 .icon {
   width: 16px;
@@ -196,6 +186,63 @@
   background-size: cover;
   font-size: 0;
   margin-right: 8px;
+}
+.icon-phone {
+  background-image: url(../../img/icon-phone.png);
+}
+.icon-code {
+  background-image: url(../../img/icon-code.png);
+}
+.icon-lock {
+  background-image: url(../../img/icon-lock.png);
+}
+.icon-left-arrow {
+  background-image: url(../../img/icon-back.png);
+  width: 19px;
+  height: 19px;
+}
+.icon-right-arrow {
+  background-image: url(../../img/icon-right-arrow.png);
+  width: 12px;
+  height: 12px;
+}
+.icon-right-arrow-big {
+  background-image: url(../../img/icon-right-arrow-b.png);
+  width: 19px;
+  height: 19px;
+}
+.icon-complete {
+  background-image: url(../../img/icon-complete.png);
+  width: 50px;
+  height: 50px;
+}
+.icon-upload {
+  background-image: url(../../img/icon-upload.png);
+  width: 111px;
+  height: 111px;
+}
+.icon-man {
+  background-image: url(../../img/icon-man.png);
+  width: 19px;
+  height: 19px;
+}
+.icon-woman {
+  background-image: url(../../img/icon-woman.png);
+  width: 19px;
+  height: 19px;
+}
+.icon-eye-open {
+  background-image: url(../../img/icon-eye-open.png);
+  width: 16px;
+  height: 16px;
+}
+.icon-eye-close {
+  background-image: url(../../img/icon-eye-close.png);
+  width: 16px;
+  height: 16px;
+}
+.ui-dim {
+  filter: blur(5px);
 }
 /* CSS Document */
 * {
@@ -340,11 +387,24 @@ html {
 body {
   background: #F1F3F4;
 }
+:-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: #999;
+}
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #999;
+}
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #999;
+}
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #999;
+}
 /* =S tool style 
 ==================================*/
-.underline {
-  border-bottom: 1px solid #EDEDED;
-}
 .bg-white {
   background: #fff !important;
 }
@@ -404,7 +464,10 @@ body {
   display: block;
   border-radius: 22px;
   background-color: #D3A460;
-  background: -webkit-linear-gradient(left, #E0B372, #D3A460);
+  /* background: linear-gradient(to right, #E0B372 0%, #D3A460 100%); */
+  background: -moz-linear-gradient(left, #E0B372 0%, #D3A460 100%);
+  /* background: -webkit-linear-gradient(left, #E0B372 0%, #D3A460 100%); */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, #E0B372), color-stop(100%, #D3A460));
   /* 标准的语法 */
   font-size: 18px;
   color: #fff;
@@ -444,9 +507,9 @@ body {
 }
 .ui-linkbtn-2 {
   display: inline-block;
-  padding: 0 15px;
+  padding: 0 14.5px;
   line-height: 34px;
-  border-radius: 16px;
+  border-radius: 17px;
   color: #D3A460;
   border: 1px solid #D3A460;
 }
@@ -613,10 +676,11 @@ body {
 }
 .head-area .left {
   float: left;
-  padding: 0 8px;
+  margin-left: 3px;
 }
 .head-area .center {
   font-size: 18px;
+  font-weight: 700;
   width: 60%;
   margin: 0 auto;
   line-height: 18px;
@@ -847,8 +911,13 @@ body {
   font-size: 111px;
 }
 #login .title-area .upload-box p {
+  margin-top: 14.5px;
   color: #333333;
   text-align: center;
+}
+#login .title-area .man-or-woman {
+  text-align: center;
+  font-size: 0;
 }
 #login .title-area .man-or-woman button {
   width: 130px;
@@ -856,6 +925,9 @@ body {
   font-size: 15px;
   border-radius: 20px;
   background: #ccc;
+}
+#login .title-area .man-or-woman button:nth-child(1) {
+  margin-right: 10px;
 }
 #login .title-area .man-or-woman button .iconfont {
   color: #D3A460;
@@ -870,23 +942,27 @@ body {
 #login .content-area h2 {
   text-align: center;
   font-size: 30px;
-  font-family: PingFang-SC-Bold;
   color: #D3A460;
-  margin: 50px 0;
+  margin-top: 72px;
+  margin-bottom: 55px;
+  height: 28px;
+  font-family: PingFang-SC-Bold;
+  font-weight: bold;
+  line-height: 24px;
 }
 #login .content-area .ui-linkbtn {
+  margin-bottom: 105px;
   font-size: 18px;
-}
-#login .content-area .other-login {
-  padding-top: 100px;
+  background: linear-gradient(-45deg, #e0b372 0%, #d3a460 100%);
 }
 #login .content-area .other-login h3 {
   color: #999;
   text-align: center;
   font-size: 15px;
-  margin-bottom: 30px;
+  margin-bottom: 29.5px;
 }
 #login .content-area .other-login p {
+  margin-bottom: 148px;
   text-align: center;
 }
 #login .content-area .other-login p a {
@@ -903,14 +979,35 @@ body {
   font-size: 49px;
   color: #60D370;
 }
+#login .complete-registration .cr-text h3,
+#login .complete-registration .cr-text h4,
+#login .complete-registration .cr-text h5 {
+  font-weight: 700;
+}
 #login .complete-registration .cr-text h3 {
   font-size: 24px;
+  height: 22.5px;
+  line-height: 24px;
+  margin-bottom: 14.5px;
 }
 #login .complete-registration .cr-text h4 {
   font-size: 18px;
+  height: 17.5px;
+  line-height: 24px;
+  margin-bottom: 74.5px;
+}
+#login .complete-registration .cr-text h5 {
+  font-size: 18px;
+  line-height: 24px;
+  margin-bottom: 14.5px;
+}
+#login .complete-registration .cr-text .icon-complete {
+  margin: 17px 0 20px 0;
 }
 #login .complete-registration .cr-text p {
   color: #666;
+  line-height: 18px;
+  margin-bottom: 99.5px;
 }
 #login .complete-registration .cr-text .mb {
   margin-bottom: 73.5px;
@@ -929,8 +1026,7 @@ body {
   box-shadow: none;
 }
 #login .no-account {
-  padding-top: 100px;
-  padding-bottom: 27.5px;
+  margin-bottom: 27.5px;
   text-align: center;
   font-size: 15px;
   line-height: 24px;
@@ -971,7 +1067,11 @@ body {
 #login .input-area .ui-dl .dd {
   margin-top: 30px;
   padding-bottom: 9.5px;
-  border-bottom: 1px solid #EDEDED;
+  background: url(../../img/line-1px.png) repeat-x 0 bottom;
+  display: flex;
+}
+#login .input-area .ui-dl .dd input {
+  flex: 1;
 }
 #login .input-area .password .dd {
   position: relative;
@@ -1041,9 +1141,7 @@ body {
 }
 .msg-item {
   position: relative;
-  margin: 0 12px;
-  padding: 13.5px 0 7.5px 0;
-  border-bottom: 2px solid #EDEDED;
+  padding: 13.5px 12px 7.5px;
   overflow: hidden;
 }
 .msg-item img {
@@ -1061,19 +1159,23 @@ body {
 .msg-item .detail h4 {
   color: #4A4A4A;
   margin-bottom: 9.5px;
+  font-weight: 700;
 }
 .msg-item .detail .mark {
   font-size: 12px;
   display: inline-block;
-  padding: 4px 7.5px;
   border-radius: 10px;
   background: rgba(211, 164, 96, 0.2);
   color: #D3A460;
+  width: 63px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
 }
 .msg-item .tip {
   position: absolute;
   top: 17.5px;
-  right: 0;
+  right: 12px;
   font-size: 12px;
 }
 .ui-operation-foot {
@@ -1279,23 +1381,32 @@ body {
   overflow: hidden;
 }
 .cont-family .fl-item .bd .pic-list {
-  padding: 0 0 0 12px;
   overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 .cont-family .fl-item .bd .pic-list li {
   float: left;
   position: relative;
-  border: 12px solid #fff;
-  border-width: 0 12px 12px 0;
-  width: calc(100%/3);
+  width: 30.95238095%;
   display: flex;
   /*设置为flex布局*/
   justify-content: center;
   /*水平居中*/
   align-items: center;
+  margin-bottom: 11.5px;
   /*垂直居中*/
 }
+.cont-family .fl-item .bd .pic-list li:before {
+  content: '';
+  padding-top: 100%;
+  display: block;
+}
 .cont-family .fl-item .bd .pic-list li img {
+  position: absolute;
+  left: 0;
+  top: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;

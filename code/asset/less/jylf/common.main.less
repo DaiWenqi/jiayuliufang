@@ -178,17 +178,23 @@ body {
 }
 
 
-
-
+:-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #999;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #999;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #999;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #999;
+}
 
 
 
 /* =S tool style 
 ==================================*/
-
-.underline {
-    border-bottom: 2/@rem solid #EDEDED;
-}
 
 .bg-white {
     background: #fff!important;
@@ -265,7 +271,10 @@ body {
     display: block;
     border-radius: 44/@rem;
     background-color: @mainColor;
-    background: -webkit-linear-gradient(left, #E0B372, #D3A460);
+        /* background: linear-gradient(to right, #E0B372 0%, #D3A460 100%); */
+    background: -moz-linear-gradient(left, #E0B372 0%, #D3A460 100%);
+    /* background: -webkit-linear-gradient(left, #E0B372 0%, #D3A460 100%); */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%, #E0B372), color-stop(100%, #D3A460));
     /* 标准的语法 */
     font-size: 18px;
     color: #fff; // line-height: 44px;
@@ -309,9 +318,9 @@ body {
 
 .ui-linkbtn-2 {
     display: inline-block;
-    padding: 0 30/@rem;
+    padding: 0 29/@rem;
     line-height: 68/@rem;
-    border-radius: 32/@rem;
+    border-radius: 34/@rem;
     color: #D3A460;
     border: 1px solid #D3A460;
 }
@@ -518,10 +527,11 @@ body {
     padding-bottom: 15px;
     .left {
         float: left;
-        padding: 0 8px;// background: url(../../img/back.png) no-repeat center;
+        margin-left: 3px;// background: url(../../img/back.png) no-repeat center;
     }
     .center {
-        font-size: @fs-m;
+        font-size: 36/@rem;
+        font-weight: 700;
         width: 60%;
         margin: 0 auto;
         line-height: 18px;
@@ -774,12 +784,18 @@ body {
                 font-size: 222/@rem;
             }
             p {
+                margin-top: 29/@rem;
                 color: #333333;
                 text-align: center;
             }
         }
         .man-or-woman {
+            text-align: center;
+                font-size: 0;
             button {
+                &:nth-child(1){
+                    margin-right: 20/@rem;
+                }
                 width: 260/@rem;
                 padding: 21/@rem 0;
                 font-size: 30/@rem;
@@ -803,21 +819,30 @@ body {
             font-size: 60/@rem;
             font-family: PingFang-SC-Bold;
             color: @mainColor;
-            margin: 50px 0;
+            margin-top: 144/@rem;
+            margin-bottom: 110/@rem;
+            height:56/@rem;
+            font-family:PingFang-SC-Bold;
+            font-weight:bold;
+            line-height:48/@rem;
         }
         .ui-linkbtn {
+            margin-bottom: 210/@rem;
             font-size: 36/@rem;
+            background: linear-gradient(-45deg,rgba(224,179,114,1) 0%,rgba(211,164,96,1) 100%);
         }
 
         .other-login {
-            padding-top: 100px;
+            
             h3 {
                 color: #999;
                 text-align: center;
                 font-size: 30/@rem;
-                margin-bottom: 30px;
+                margin-bottom: 59/@rem;
+                
             }
             p {
+                margin-bottom: 296/@rem;
                 text-align: center;
                 a {
                     display: inline-block;
@@ -836,14 +861,27 @@ body {
                 font-size: 98/@rem;
                 color: #60D370;
             }
+            h3,h4,h5{font-weight: 700;}
             h3 {
                 font-size: 48/@rem;
+                height: 45/@rem;
+                line-height: 48/@rem;
+                margin-bottom: 29/@rem;
             }
             h4 {
                 font-size: 36/@rem;
+                height: 35/@rem;
+                line-height: 48/@rem;
+                margin-bottom: 149/@rem;
+            }
+            h5{font-size: 36/@rem;line-height: 48/@rem;margin-bottom: 29/@rem;}
+            .icon-complete{
+                margin: 34/@rem 0 40/@rem 0;
             }
             p {
                 color: #666;
+                line-height: 36/@rem;
+                margin-bottom: 199/@rem;
             }
             .mb {
                 margin-bottom: 147/@rem;
@@ -865,8 +903,7 @@ body {
     }
     
     .no-account {
-        padding-top: 100px;
-        padding-bottom: 55/@rem;
+        margin-bottom: 55/@rem;
         text-align: center;
         font-size: @fs-default;
         line-height: 48/@rem;
@@ -911,7 +948,11 @@ body {
             .dd {
                 margin-top: 30px;
                 padding-bottom: 19/@rem;
-                border-bottom: 1px solid #EDEDED;
+                // border-bottom: 1px solid #EDEDED;
+                background: url(../../img/line-1px.png) repeat-x 0 bottom;
+                display: flex;
+
+                input{flex:1;}
             }
         }
 
@@ -1003,9 +1044,7 @@ body {
 
 .msg-item {
     position: relative;
-    margin: 0 24/@rem;
-    padding: 27/@rem 0 15/@rem 0;
-    border-bottom: 2px solid #EDEDED;
+    padding:27/@rem 24/@rem 15/@rem;
     overflow: hidden;
     img {
         border-radius: 100%;
@@ -1021,20 +1060,24 @@ body {
         h4 {
             color: #4A4A4A;
             margin-bottom: 19/@rem;
+            font-weight: 700;
         }
         .mark {
             font-size: 24/@rem;
             display: inline-block;
-            padding: 8/@rem 15/@rem;
             border-radius: 20/@rem;
             background: rgba(211, 164, 96, 0.2);
             color: @mainColor;
+            width:126/@rem;
+            height:40/@rem;
+            line-height: 40/@rem;
+            text-align: center;
         }
     }
     .tip {
         position: absolute;
         top: 35/@rem;
-        right: 0;
+        right: 24/@rem;
         font-size: 24/@rem;
     }
 }
@@ -1272,22 +1315,33 @@ body {
             overflow: hidden;
             .pic-list {
                 // width: 720/@rem;
-                padding: 0 0 0 24/@rem;
+                // padding: 0 0 0 24/@rem;
                 overflow: hidden;
+                display: flex;
+                flex-wrap:wrap;
+                justify-content:space-between;
                 li {
                     float: left;
                     position: relative; // margin-right: 12/@rem;
                     // margin: 0 12/@rem 12/@rem 0;
-                    border: 24/@rem solid #fff;
-                    border-width: 0 24/@rem 24/@rem 0;
-                    width: calc(100%/3); // height: 204/@rem;
+                    width: 30.95238095238095%; // height: 204/@rem;
                     display: flex;
                     /*设置为flex布局*/
                     justify-content: center;
                     /*水平居中*/
                     align-items: center;
+                    margin-bottom: 23/@rem;
                     /*垂直居中*/
+
+                    &:before{
+                        content:'';
+                        padding-top: 100%;
+                        display: block;
+                    }
                     img {
+                        position: absolute;
+                        left: 0;
+                        top: 0;
                         width: 100%;
                         height: 100%;
                         object-fit: cover;

@@ -20,6 +20,10 @@
 .pt-10 {
   padding-top: 10px;
 }
+.vertical-center {
+  display: flex;
+  align-items: center;
+}
 .photo-display .hd {
   font-size: 18px;
   line-height: 48px;

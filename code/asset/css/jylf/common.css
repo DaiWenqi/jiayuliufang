@@ -24,8 +24,12 @@
   display: flex;
   align-items: center;
 }
+.bottom-box-shadow {
+  box-shadow: 0 4px 5px 0 rgba(112, 86, 50, 0.04);
+}
 .photo-display .hd {
   font-size: 18px;
+  font-weight: 700;
   line-height: 48px;
   padding: 0 12px;
 }
@@ -184,7 +188,7 @@
   display: inline-block;
   vertical-align: middle;
   background-size: cover;
-  font-size: 0;
+  font-size: 0!important;
   margin-right: 8px;
 }
 .icon-phone {
@@ -241,8 +245,40 @@
   width: 16px;
   height: 16px;
 }
+.icon-fangdajing {
+  background-image: url(../../img/icon-fangdajing.png);
+  width: 16px;
+  height: 16px;
+}
 .ui-dim {
   filter: blur(5px);
+}
+.ui-personal-title {
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+}
+.ui-personal-title .left {
+  margin-right: 10.5px;
+}
+.ui-personal-title .center {
+  flex: 1;
+}
+.ui-personal-title .right {
+  margin-left: 10.5px;
+}
+.ui-personal-title .personal-photo {
+  width: 45px;
+  height: 45px;
+}
+.ui-personal-title .name {
+  font-weight: 700;
+  font-size: 15px;
+  margin-right: 5px;
+}
+.ui-personal-title .time {
+  color: #999;
+  font-size: 12px;
 }
 /* CSS Document */
 * {
@@ -557,6 +593,7 @@ body {
   z-index: 9;
   bottom: 0;
   left: 0;
+  width: 100%;
 }
 .ui-input {
   color: #999;
@@ -621,23 +658,30 @@ body {
 }
 .search-wrap {
   padding: 5px 12px;
+  display: flex;
+  align-items: center;
 }
 .search-wrap.focus .ui-search {
   text-align: left;
-  width: 295px;
 }
 .search-wrap.focus .ui-search .txt {
-  padding-left: 31.5px;
+  padding-left: 36.5px;
   font-size: 15px;
+  flex: 1;
 }
 .search-wrap.focus .ui-search .placeholder {
+  line-height: 30px;
   padding-left: 16.5px;
 }
 .search-wrap.focus .ui-search .placeholder em {
   display: none;
 }
 .search-wrap.focus .search-cancel {
-  display: inline-block;
+  width: 51.5px;
+  text-align: center;
+}
+.head-area .ui-search input {
+  background: #F1F3F4;
 }
 .ui-search {
   height: 30px;
@@ -721,23 +765,27 @@ body {
 }
 .ui-list .l-item {
   position: relative;
-  border: 1px solid #F1F3F4;
+  background: url(../../img/line-1px.png) repeat-x 0 bottom;
   padding: 13px 12px;
   overflow: hidden;
 }
 .ui-list .l-item .title {
   margin-bottom: 9.5px;
+  height: 14.5px;
   font-size: 15px;
 }
 .ui-list .l-item .cont {
   color: #999;
   font-size: 12px;
+  height: 9.5px;
 }
 .ui-list .l-item .ui-linkbtn {
   border-radius: 5px;
   display: inline-block;
-  padding: 11px 7px;
-  line-height: 24px;
+  padding: 0;
+  width: 60.5px;
+  text-align: center;
+  line-height: 23px;
   position: absolute;
   top: 21.5px;
   right: 12px;
@@ -764,6 +812,7 @@ body {
   background: #F3B966;
   color: #fff;
   float: left;
+  font-weight: 700;
 }
 .ui-list .l-item .right .highlight {
   font-size: 14px;
@@ -799,6 +848,7 @@ body {
 }
 .ui-arrow-list .al-item .left span {
   line-height: 14.5px;
+  font-weight: 700;
   color: #4A4A4A;
 }
 .ui-arrow-list .al-item .right {
@@ -810,6 +860,7 @@ body {
 .ui-arrow-list .al-item .right .iconfont {
   line-height: 55px;
   font-size: 14.5px;
+  margin-left: 12px;
 }
 .home-display {
   margin-bottom: 26.5px;
@@ -1233,7 +1284,7 @@ body {
   color: #D3A460;
 }
 .ui-operation-foot .publish i {
-  font-size: 24px;
+  font-size: 0;
 }
 .ui-operation-foot .publish > div {
   border-radius: 100%;
@@ -1250,23 +1301,34 @@ body {
 .system .ta-c {
   padding: 15px 0;
 }
-#birthday-blessing .ui-linkbtn {
-  margin: 0 30px;
-  margin-bottom: 19.5px;
+.cont-birthday-card .birthday-card-hd {
+  padding-top: 15px;
+  margin-bottom: 4px;
 }
-.birthday-card h4 {
-  padding: 4px 0 15px 0;
-  color: #F14D4E;
-  font-size: 18px;
-}
-.birthday-card .pic-box {
+.cont-birthday-card .birthday-card-bd {
   padding: 0 12px;
   margin-bottom: 30px;
 }
-.birthday-card .pic-box img {
+.cont-birthday-card .birthday-card-ft .ui-linkbtn {
+  margin: 0 30px 19.5px;
+}
+.cont-birthday-card .birthday-card-ft .info {
+  margin-bottom: 37px;
+}
+.cont-birthday-card .title {
+  color: #F14D4E;
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+.cont-birthday-card .img-box {
+  width: 100%;
+  height: 327px;
+}
+.cont-birthday-card .img-box img {
   width: 100%;
   height: 100%;
-  background-size: cover;
+  object-fit: contain;
 }
 .family-id {
   text-align: center;
@@ -1428,6 +1490,7 @@ body {
   height: 100%;
   background: #000;
   opacity: 0.3;
+  border-radius: 5px;
 }
 .cont-family .fl-item .bd .pic-list li .more span {
   display: block;
@@ -1586,6 +1649,7 @@ body {
 }
 .publish-title h2 {
   font-size: 30px;
+  font-weight: 700;
   line-height: 28.5px;
   margin-bottom: 7.5px;
 }

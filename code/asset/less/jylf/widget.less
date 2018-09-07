@@ -11,11 +11,12 @@
         border-bottom: 1/@rem solid #EDEDED;
         .list {
             overflow: hidden;
+            display: flex;
+            flex-wrap:wrap;
+
             padding-left: 24/@rem;
             .list-item {
-
-                // width: 208/@rem;height: 208/@rem; 
-                float: left;
+                flex:percentage(208/696) 0;
                 margin-right: 24/@rem;
                 margin-bottom: 24/@rem;
                 color: #fff;
@@ -67,8 +68,8 @@
 
             .pic-box {
                 position: relative;
-                width: 208/@rem;
-                height: 208/@rem;
+                width: 100%;
+                height: 100%;
                 background: #F1F3F4;
                 border-radius: 10/@rem;
                 img {
@@ -129,8 +130,17 @@
                     left: 0;
                     padding-right: 24/@rem;
                     padding-left: 12/@rem;
-                    border-radius: 0px 20px 0px 10px;
+                    border-radius: 0/@rem 20/@rem 0/@rem 10/@rem;
                     background: rgba(0, 0, 0, .3);
+                    font-size: 0;
+                    height: 40/@rem;
+                    line-height: 40/@rem;
+                    .icon{
+                        margin-right: 6/@rem;
+                            vertical-align: baseline;
+                    }
+                    .count{font-size: 22/@rem;}
+                    .comment{margin-right: 21/@rem;}
                     .favour {
                         .active {
                             color: #FF7676;
@@ -183,8 +193,14 @@
     background-size: contain;
 }
 .bgPic-family{
-    background: url(../../img/bg-family.png) no-repeat #F1F3F4;
-    background-size: contain;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 436/@rem;
+    margin: 0 auto;
+    background: url(../../img/bg-family.png) no-repeat;
+    background-size: 100% 436/@rem;
 }
 
 //图标
@@ -291,7 +307,11 @@
     width: 30/@rem;
     height: 30/@rem;
 }
-
+.icon-delete{
+    background-image: url(../../img/icon-delete.png);
+    width: 26/@rem;
+    height: 26/@rem;
+}
 /* 模糊 */
 .ui-dim {
     filter: blur(5px);

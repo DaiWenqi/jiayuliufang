@@ -542,10 +542,11 @@ body {
         position: absolute;
         right: 24/@rem;
         top: 80/@rem;
-        width: 68/@rem;
+        // width: 68/@rem;
         font-size: @fs-default;
         .iconfont {
             font-size: @fs-m;
+            margin-left: 50/@rem;
         }
     }
 }
@@ -1553,10 +1554,19 @@ body {
         line-height: 92/@rem;
         width: 102/@rem;
         color: #4A4A4A;
+        text-align: center;
+
+        span{
+            display: inline-block;
+            // width: 91/@rem;
+            padding-bottom: 24/@rem;
+        }
         &.cur {
-            border-bottom: 4/@rem solid #DEB06E;
-            color: #D3A460;
-            font-size: 48/@rem;
+            span{
+                border-bottom: 4/@rem solid #DEB06E;
+                color: #D3A460;
+                font-size: 48/@rem;
+            }
         }
     }
 }

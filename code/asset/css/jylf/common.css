@@ -27,6 +27,9 @@
 .bottom-box-shadow {
   box-shadow: 0 4px 5px 0 rgba(112, 86, 50, 0.04);
 }
+.pb-0 {
+  padding-bottom: 0!important;
+}
 .photo-display .hd {
   font-size: 18px;
   font-weight: 700;
@@ -35,12 +38,11 @@
 }
 .photo-display .bd {
   padding-bottom: 20px;
-  border-bottom: 0.5px solid #EDEDED;
 }
 .photo-display .bd .list {
   overflow: hidden;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   padding-left: 12px;
 }
 .photo-display .bd .list .list-item {
@@ -87,21 +89,21 @@
   font-size: 15px;
 }
 .photo-display .bd .list .list-item-title.single-row {
-  line-height: 45px;
+  margin: 14.5px 0 15.5px 0;
+  height: 14.5px;
 }
 .photo-display .bd .list .list-item-info {
   color: #999;
 }
 .photo-display .bd .list .pic-box {
   position: relative;
-  width: 100%;
-  height: 100%;
   background: #F1F3F4;
   border-radius: 5px;
 }
 .photo-display .bd .list .pic-box img {
   width: 100%;
   height: 100%;
+  vertical-align: bottom;
 }
 .photo-display .bd .list .pic-box .more {
   width: 100%;
@@ -798,9 +800,9 @@ body {
   top: 40px;
   font-size: 15px;
 }
-.head-area .right .iconfont {
+.head-area .right .icon {
   font-size: 18px;
-  margin-left: 25px;
+  margin: 0 25px 0 0;
 }
 .foot-area {
   height: 53px;
@@ -1736,102 +1738,56 @@ body {
   color: #999;
 }
 .activity-display .bd {
-  width: 100%;
+  padding: 0 12px;
 }
-.activity-display .bd .list-item,
-.activity-display .bd li {
+.activity-display .display-list .list-item {
   position: relative;
 }
-.activity-display .bd .list-item img,
-.activity-display .bd li img {
+.activity-display .display-list .list-item:before {
+  content: '';
+  display: block;
+  padding-top: 100%;
+}
+.activity-display .display-list .list-item img {
+  position: absolute;
+  left: 0;
+  top: 0;
   width: 100%;
   height: 100%;
   border-radius: 5px;
 }
-.activity-display .display-list {
-  clear: float;
-}
-.activity-display .display-list .left {
-  float: left;
-}
-.activity-display .display-list .right {
-  float: left;
-}
-.activity-display .type-1 {
-  padding: 0 12px;
-}
-.activity-display .type-1 li {
-  height: 220px;
-}
-.activity-display .type-2 {
-  padding-left: 12px;
-}
-.activity-display .type-2 .list-item {
-  float: left;
-  width: 162px;
-  height: 162px;
-  margin-right: 12px;
-}
-.activity-display .type-2 .list-item:nth-child(1) {
-  margin-right: 12px;
-}
-.activity-display .type-3 {
-  overflow: hidden;
-  padding-left: 12px;
-}
-.activity-display .type-3 .left,
-.activity-display .type-3 .right {
-  float: left;
-}
-.activity-display .type-3 .right {
-  width: 104px;
-}
-.activity-display .type-3 .left .list-item {
-  margin: 0 12px 12px 0;
-  width: 220px;
-  height: 220px;
-}
-.activity-display .type-3 .right .list-item {
-  width: 104px;
-  height: 104px;
-  margin: 0 0 12px 12px;
-}
 .activity-display .row-1-col-2 {
-  padding-left: 12px;
+  overflow: hidden;
+  padding-bottom: 12px;
 }
 .activity-display .row-1-col-2 .list-item {
   float: left;
-  width: 162px;
-  height: 162px;
-  margin-right: 12px;
+  width: 48.21428571%;
 }
 .activity-display .row-1-col-2 .list-item:nth-child(1) {
   margin-right: 12px;
 }
 .activity-display .rowspan-2-col-2 {
   overflow: hidden;
-  padding-left: 12px;
+  padding-bottom: 12px;
 }
-.activity-display .rowspan-2-col-2 .left,
-.activity-display .rowspan-2-col-2 .right {
+.activity-display .rowspan-2-col-2 .list-item {
   float: left;
 }
-.activity-display .rowspan-2-col-2 .right {
-  width: 104px;
+.activity-display .rowspan-2-col-2 .list-item:nth-child(1) {
+  width: 65.47619048%;
+  margin-right: 12px;
 }
-.activity-display .rowspan-2-col-2 .left .list-item {
-  margin: 0 0 12px 0;
-  width: 220px;
-  height: 220px;
+.activity-display .rowspan-2-col-2 .list-item:nth-child(2) {
+  width: 30.80357143%;
+  margin-bottom: 12px;
 }
-.activity-display .rowspan-2-col-2 .right .list-item {
-  width: 104px;
-  height: 104px;
-  margin: 0 0 12px 12px;
+.activity-display .rowspan-2-col-2 .list-item:nth-child(3) {
+  width: 30.80357143%;
 }
 .activity-display .row-2-colspan-2 {
   overflow: hidden;
-  padding-left: 12px;
+  margin-bottom: 12px;
 }
 .activity-display .row-2-colspan-2 .left,
 .activity-display .row-2-colspan-2 .right {
@@ -1846,21 +1802,23 @@ body {
   width: 220px;
   height: 220px;
 }
+.activity-display .row-1-col-1 {
+  margin-bottom: 12px;
+}
 .activity-display .row-1-col-1 .list-item {
-  width: 336px;
-  height: 220px;
-  padding: 0 12px;
+  width: 100%;
 }
 .activity-display .row-1-col-3 {
   overflow: hidden;
-  padding-left: 12px;
+  margin-bottom: 12px;
 }
 .activity-display .row-1-col-3 .list-item {
   float: left;
-  width: 104px;
-  height: 104px;
-  padding-right: 12px;
-  padding-bottom: 12px;
+  width: 30.95238095%;
+  margin-right: 12px;
+}
+.activity-display .row-1-col-3 .list-item:last-child {
+  margin-right: 0;
 }
 .ui-imgbox {
   width: 100%;

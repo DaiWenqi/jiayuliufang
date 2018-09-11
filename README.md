@@ -10,3 +10,9 @@
 修改html
 首页：.ui-display 改成 .home-display
 login页，foot-area 改成 no-account 位置移动到content-area里面
+
+
+禅道：
+http://projects.apicloud-system.com/index.php?m=bug&f=view&ID=46890
+jinxing 
+123456

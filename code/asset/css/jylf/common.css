@@ -1020,6 +1020,11 @@ body {
   margin-bottom: 24.5px;
   text-align: center;
 }
+#login .title-area .upload-box img {
+  border-radius: 50%;
+  width: 111px;
+  height: 111px;
+}
 #login .title-area .upload-box .iconfont {
   font-size: 111px;
 }
@@ -1198,7 +1203,7 @@ body {
 }
 #login .input-area .auth-code input {
   margin-right: 51px;
-  width: 119px;
+  width: 80px;
 }
 #login .input-area .ui-linktext {
   margin-top: 25px;
